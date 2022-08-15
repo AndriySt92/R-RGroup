@@ -821,7 +821,7 @@ export const Portfolio = () => {
   }
 
   const handleClickPrevPage = (e) => {
-    e.preventDefault()
+    e.preventDefault() 
     setPageNumber(pageNumber-1)
     scrollToTop()
   }

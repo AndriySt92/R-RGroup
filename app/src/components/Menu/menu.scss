@@ -158,6 +158,16 @@
             text-transform: uppercase;
         }
     }
+    @media screen and (max-width: 992px) {
+        .dropdown_menu {
+            display: none;
+        }
+        .nav-link{
+            &:after{
+                display: none;
+            }
+        }
+    }
     @media screen and (max-width: 767px) {
         .callback_button {
             padding: 0px;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './menu.scss'
 import { logo, phoneGif } from '../../assets'
@@ -16,6 +16,15 @@ const servicesItems = [
 ]
 
 export const Menu = () => {
+
+  const hamburgerButton = useRef()
+
+  const handleClick = () => {
+    if (hamburgerButton.current && window.innerWidth < 992) {
+      hamburgerButton.current.click()
+    }
+  }
+
   return (
     <div className="menu">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0">
@@ -28,6 +37,7 @@ export const Menu = () => {
               <span className="hoverSpan">Замовити дзвінок</span>
             </div>
           <button
+            ref={hamburgerButton}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -40,12 +50,12 @@ export const Menu = () => {
           <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink to="/" className="nav-link" aria-current="page">
+                <NavLink to="/" className="nav-link" aria-current="page" onClick={handleClick}>
                   Будинки під ключ
                 </NavLink>
               </li>
               <li className="nav-item services_item">
-                <NavLink to="/services" className="nav-link dropdown-toggle">
+                <NavLink to="/services" className="nav-link dropdown-toggle" onClick={handleClick}>
                   Ремонтні роботи
                 </NavLink>
                 <ul className="dropdown_menu">
@@ -57,17 +67,17 @@ export const Menu = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink to="/portfolio" className="nav-link">
+                <NavLink to="/portfolio" className="nav-link" onClick={handleClick}>
                   Портфоліо
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/tips" className="nav-link">
+                <NavLink to="/tips" className="nav-link" onClick={handleClick}>
                   Поради
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/contacts" className="nav-link">
+                <NavLink to="/contacts" className="nav-link" onClick={handleClick}>
                   Контакти
                 </NavLink>
               </li>

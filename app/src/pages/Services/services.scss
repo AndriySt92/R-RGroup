@@ -10,13 +10,14 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ccc;
+        margin-left: 0px!important;
         padding-bottom: 20px;
         padding-top: 20px;
         width: 100%;
         &_img {
-            height: 240px;
-            width: 360px;
-            margin: 0px 50px 0px 0px;
+            height: 268px;
+            max-width: 400px;
+            padding: 0px!important;
             box-shadow: 3px 3px 3px rgba(25, 25, 30, 0.3);
             img {
                 width: 100%;
@@ -27,6 +28,47 @@
             &:hover {
                 background: #fff;
                 opacity: 0.8;
+            }
+        }
+        @media screen and (max-width: 1400px){
+            .servises_item{ 
+                &_img {
+                    height: 230px;
+                }
+            }
+        }
+        @media screen and (max-width: 1200px){
+            .servises_item{
+                &_img {
+                    height: 193px;
+                }
+            }
+        }
+        @media screen and (max-width: 992px){
+            .servises_item{
+                justify-content: center;
+                &_img {
+                    margin: 0px auto;
+                    height: 263px;
+                }
+                &_title {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        @media screen and (max-width: 434px){
+            .servises_item{
+                justify-content: center;
+                &_img {
+                    margin: 0px auto;
+                    max-width: 290px;
+                    height: 190px;
+                }
+                &_title {
+                    margin-top: 20px;
+                    text-align: center;
+                }
             }
         }
     }

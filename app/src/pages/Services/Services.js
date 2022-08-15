@@ -39,15 +39,19 @@ export const Services = () => {
             <div className="col-12">
               {servicesItems.map((item) => {
                 return (
-                  <Link to={item.linkTo} key={item.title} >
-                    <div className="servises_item">
-                      <div className="servises_item_img">
-                        <img src={item.imgSrc} />
+                  <Link to={item.linkTo} key={item.title}>
+                    <div className="servises_item row">
+                        <div className="col-sm-12 col-md-7 col-lg-4">
+                          <div className="servises_item_img">
+                            <img src={item.imgSrc} />
+                          </div>
+                        </div>
+                        <div className="col-sm-12 col-md-5 col-lg-8">
+                          <div className="servises_item_title">
+                            <h4>{item.title}</h4>
+                          </div>
+                        </div>
                       </div>
-                      <div className="servises_item_title">
-                        <h4>{item.title}</h4>
-                      </div>
-                    </div>
                   </Link>
                 )
               })}
