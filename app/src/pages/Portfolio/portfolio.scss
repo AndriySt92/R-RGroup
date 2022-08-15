@@ -19,6 +19,13 @@
             justify-content: center;
         }
       }
+
+      .page-item{
+        &.disable{
+            pointer-events: none;
+            opacity: 0.5;
+        }
+      }
     
       .page-link{
         background-color: #fff;
@@ -26,6 +33,7 @@
         border-top-right-radius:none;
         border-bottom-right-radius: none;
         transition: all .5 ease-in-out;
+        cursor: pointer;
         &:hover{
            background-color: var(--color-blue);
            color: #fff;
@@ -33,6 +41,9 @@
         &.active{
             background-color: var(--color-blue);
             color: #fff;
+        }
+        &:focus {
+            box-shadow: none;
         }
     }
 }

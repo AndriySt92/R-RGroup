@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef, } from 'react'
 import './portfolio.scss'
 import {
   C001_1,
@@ -803,13 +803,37 @@ export const Portfolio = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const [pageSize, setPageSize] = useState(12)
   const [currentProjects, setCurrentProjects] = useState([])
+  const projectsWrap = useRef()
 
   useEffect(() => {
     setCurrentProjects(projects.slice((pageNumber - 1) * pageSize, pageNumber * pageSize))
   }, [pageNumber])
 
+  const scrollToTop = () => {
+    if(projectsWrap.current){
+      window.scrollTo(0, projectsWrap.current.offsetTop - 10);
+    }
+  }
+
+  const handleClick = (pageNumber) => {
+    setPageNumber(pageNumber)
+    scrollToTop()
+  }
+
+  const handleClickPrevPage = (e) => {
+    e.preventDefault()
+    setPageNumber(pageNumber-1)
+    scrollToTop()
+  }
+
+  const handleClickNextPage = (e) => {
+    e.preventDefault()
+    setPageNumber(pageNumber+1)
+    scrollToTop()
+  }
+  
   return (
-    <div className="portfolio">
+    <div ref={projectsWrap} className="portfolio">
       <div className="container">
         <div className="page_title">
           <div className="row">
@@ -823,16 +847,16 @@ export const Portfolio = () => {
           <div className="col-12 text-center">
             <nav aria-label="Page navigation example">
               <ul className="pagination pagination-md">
-                <li className="page-item" onClick={() => setPageNumber(pageNumber - 1)}>
+                <li className={`page-item ${pageNumber === 1 ? 'disable' : ''}`} onClick={handleClickPrevPage}>
                   <a className="page-link">Назад</a>
                 </li>
                 {[1, 2, 3, 4].map((item) => (
-                  <li key={item} className="page-item" onClick={() => setPageNumber(item)}>
+                  <li key={item} className="page-item" onClick={() => handleClick(item)}>
                     <a className={`page-link ${pageNumber == item ? 'active' : ''}`}>{item}</a>
                   </li>
                 ))}
-                <li className="page-item" onClick={() => setPageNumber(pageNumber + 1)}>
-                  <a className="page-link" href="#">
+                <li className={`page-item ${pageNumber === 4 ? 'disable' : ''}`} onClick={handleClickNextPage}>
+                  <a className="page-link" href="">
                     Вперед
                   </a>
                 </li>
