@@ -16,29 +16,32 @@ import { Portfolio } from './pages/Portfolio/Portfolio'
 import { Tips } from './pages/Tips/Tips'
 import { Project } from './pages/Project/Project'
 import { Tip } from './pages/Tip/Tip'
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop'
 
-function App() { 
+function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path='/' element={<Layout/>}>
-          <Route index element={<Home />} />
-          <Route path="contacts" element={<Contacts />} />
-          <Route path="services" element={<Services />} />
-          <Route path="repairWorks" element={<RepairWork />} />
-          <Route path="facadeWorks" element={<FacadeWorks  />} />
-          <Route path="plasterWorks" element={<PlasterWorks />} />
-          <Route path="roofingWorks" element={<RoofingWorks  />} />
-          <Route path="projectDevelopment" element={<ProjectDevelopment  />} />
-          <Route path="concreteWorks" element={<ConcreteWorks  />} />
-          <Route path="pavingWorks" element={<PavingWorks  />} />
-          <Route path="decorativePlaster" element={<DecorativePlaster  />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="tips" element={<Tips />} />
-          <Route path="tip/:urlTitle" element={<Tip />} />
-          <Route path="project/:name" element={<Project />} />
-        </Route>
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="services" element={<Services />} />
+            <Route path="repairWorks" element={<RepairWork />} />
+            <Route path="facadeWorks" element={<FacadeWorks />} />
+            <Route path="plasterWorks" element={<PlasterWorks />} />
+            <Route path="roofingWorks" element={<RoofingWorks />} />
+            <Route path="projectDevelopment" element={<ProjectDevelopment />} />
+            <Route path="concreteWorks" element={<ConcreteWorks />} />
+            <Route path="pavingWorks" element={<PavingWorks />} />
+            <Route path="decorativePlaster" element={<DecorativePlaster />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="tips" element={<Tips />} />
+            <Route path="tip/:urlTitle" element={<Tip />} />
+            <Route path="project/:name" element={<Project />} />
+          </Route>
+        </Routes>
+      </ScrollToTop>
     </div>
   )
 }

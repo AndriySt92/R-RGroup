@@ -1,0 +1,243 @@
+.top_slider {
+    &_block {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 406px;
+     }
+
+     @keyframes plasterWorksSlide {
+        0%{
+           background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+        }
+     
+        // 25%{
+        //    background-image: url("../../assets/images/repair-2.jpg");
+        // }
+     
+        // 25.1%{
+        //    background-image: url("../../assets/images/repair-2.jpg");
+        // }
+     
+        25%{
+           background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+        }
+        25.01%{
+           background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+        }
+     
+        75%{
+            background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+        }
+     
+        75.01%{
+                  background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+        }
+     
+        100%{
+           background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+        }
+     }
+
+     @media screen and (max-width: 1400px){
+        &_block{
+            min-height: 364px;
+        }
+     }
+
+     @media screen and (max-width: 1200px){
+        &_block{
+            min-height: 303px;
+        }
+     }
+     @media screen and (max-width: 992px){
+        &_block{
+            min-height: 223px;
+        }
+
+        form{
+            h5{
+                font-size: 16px;
+            }
+            span{
+                font-size: 14px;
+            }
+            input{
+                font-size: 16px!important;
+                padding: 5 px!important;
+            }
+            button{
+                padding: 5px;
+                font-size: 16px;
+            }
+        }
+     }
+     @media screen and (max-width: 768px){
+        &_block{
+            min-height: 344px;
+        }
+     }
+     @media screen and (max-width: 537px){
+        &_block{
+            min-height: 326px;
+        }
+     }
+
+     @media screen and (max-width: 493px){
+        &_block{
+            min-height: 300px;
+        }
+     }
+     @media screen and (max-width: 459px){
+        &_block{
+            min-height: 277px;
+        }
+     }
+     @media screen and (max-width: 423px){
+        &_block{
+            min-height: 250px;
+        }
+     }
+
+     @media screen and (max-width: 377px){
+        &_block{
+            min-height: 228px;
+        }
+     }
+     @media screen and (max-width: 350px){
+        &_block{
+            min-height: 205px;
+        }
+     }
+}
+
+  
+ @keyframes plasterWorksSlide {
+    0%{
+       background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+    }
+ 
+    // 25%{
+    //    background-image: url("../../assets/images/repair-2.jpg");
+    // }
+ 
+    // 25.1%{
+    //    background-image: url("../../assets/images/repair-2.jpg");
+    // }
+ 
+    25%{
+       background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+    }
+    25.01%{
+       background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+    }
+ 
+    75%{
+        background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+    }
+ 
+    75.01%{
+              background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+    }
+ 
+    100%{
+       background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+    }
+ }
+
+ @keyframes decorativePlasterSlide {
+    0%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-1.jpg");
+    }
+ 
+    25%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-2.jpg");
+    }
+    25.01%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-2.jpg");
+    }
+    50%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-3.jpg");
+    }
+    50.01%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-3.jpg");
+    }
+ 
+    75%{
+        background-image: url("../../assets/images/decPlaster/dec-plaster-slide-4.webp");
+    }
+ 
+    75.01%{
+              background-image: url("../../assets/images/decPlaster/dec-plaster-slide-4.webp");
+    }
+ 
+    100%{
+       background-image: url("../../assets/images/decPlaster/dec-plaster-slide-1.jpg");
+    }
+ }
+
+ 
+ @keyframes facadeWorksSlide {
+    0%{
+       background-image: url("../../assets/images/facadeWorks/facade-slide-1.jpg");
+    }
+ 
+    25%{
+       background-image: url("../../assets/images/facadeWorks/facade-slide-2.jpg");
+    }
+    25.01%{
+       background-image: url("../../assets/images/facadeWorks/facade-slide-2.jpg");
+    }
+ 
+    75%{
+        background-image: url("../../assets/images/facadeWorks/facade-slide-3.jpg");
+    }
+ 
+    75.01%{
+              background-image: url("../../assets/images/facadeWorks/facade-slide-3.jpg");
+    }
+ 
+    100%{
+       background-image: url("../../assets/images/facadeWorks/facade-slide-1.jpg");
+    }
+ }
+
+ @keyframes repairWorksSlide {
+    0%{
+       background-image: url("../../assets/images/repairWorks/repair-slide-1.jpg");
+    }
+    50%{
+       background-image: url("../../assets/images/repairWorks/repair-slide-2.jpg");
+    }
+    50.01%{
+       background-image: url("../../assets/images/repairWorks/repair-slide-2.jpg");
+    } 
+    100%{
+       background-image: url("../../assets/images/repairWorks/repair-slide-1.jpg");
+    }
+ }
+
+ @keyframes roofingWorksSlide {
+    0%{
+       background-image: url("../../assets/images/roofingWorks/roofing-works-slide-1.webp");
+    }
+ 
+    25%{
+       background-image: url("../../assets/images/roofingWorks/roofing-works-slide-2.jpg");
+    }
+    25.01%{
+       background-image: url("../../assets/images/roofingWorks/roofing-works-slide-2.jpg");
+    }
+   
+    75%{
+        background-image: url("../../assets/images/roofingWorks/roofing-works-slide-3.webp");
+    }
+ 
+    75.01%{
+              background-image: url("../../assets/images/roofingWorks/roofing-works-slide-3.webp");
+    }
+ 
+    100%{
+       background-image: url("../../assets/images/roofingWorks/roofing-works-slide-1.webp");
+    }
+ }

@@ -17,6 +17,7 @@ import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
+import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 
 const plasterWorksList = [
   {
@@ -136,7 +137,7 @@ export const PlasterWorks = () => {
             </div>
           </div>
         </div>
-        <section className="consultation">
+        {/* <section className="consultation">
           <div className="row">
             <div className="col-md-6">
               <div className="consultation_slider"></div>
@@ -145,7 +146,8 @@ export const PlasterWorks = () => {
               <Form title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'} subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'} />
             </div>
           </div>
-        </section>
+        </section> */}
+        <TopSliderSection animationSlide='plasterWorksSlide' />
         <OrderTypeSection
           title={plasterOrderType.mainTitle}
           content={plasterOrderType.ordersTypeList}

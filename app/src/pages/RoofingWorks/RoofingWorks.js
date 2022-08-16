@@ -21,6 +21,7 @@ import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
+import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 
 const roofingWorksList = [
   {
@@ -99,16 +100,7 @@ export const RoofingWorks = () => {
             </div>
           </div>
         </div>
-        <section className="consultation">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="consultation_slider"></div>
-            </div>
-            <div className="col-md-6 px-5">
-              <Form title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'} subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'} />
-            </div>
-          </div>
-        </section>
+        <TopSliderSection animationSlide='roofingWorksSlide' />
         <OrderTypeSection
           title={roofingWorksOrderType.mainTitle}
           content={roofingWorksOrderType.ordersTypeList}

@@ -13,9 +13,9 @@ export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder }) => 
   }
 
   return (
-    <form className="form text-center">
+    <form className="form text-center mt-3 mb-md-0">
       <h5 className="mb-2">{title}</h5>
-      <span className="mb-4">{subtitle}</span>
+      <span className="mb-3 mb-lg-4 ">{subtitle}</span>
       <div className="input-group input-group-lg mt-3 mb-2">
         <input
           value={formData.name}
@@ -27,7 +27,7 @@ export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder }) => 
           aria-describedby="inputGroup-sizing-lg"
         />
       </div>
-      <div className="input-group input-group-lg mb-4">
+      <div className="input-group input-group-lg mb-3 mb-lg-4 ">
         <input
           value={formData.number}
           onChange={changeHandler}
