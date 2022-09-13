@@ -5,20 +5,9 @@
         background: var(--color-blue)!important;
         .navbar-brand {
             img{
-                height: 70px;
+                height: 60px;
              
             }
-            @media screen and (max-width: 1220px) {
-                img {
-                    height: 60px;
-                }
-            }
-            @media screen and (max-width: 720px) {
-                img {
-                    height: 50px;
-                }
-            }
-
         }
     }
     &_logo {
@@ -59,9 +48,6 @@
                 width: 100%;
             }
         }
-        @media screen and (max-width: 1220px) {
-            margin: 0px;
-        }
     }
     .services_item{
         position: relative;
@@ -89,13 +75,19 @@
                 display: none;
                 color: white;
                 padding: 11px 20px;
-                margin: -1px 0px;
+                margin: -2px 0px;
                 font-size: 16px;
                 opacity: 0;
                 a{
                     color: #fff;
                     font-size: 14px;
                     text-transform: uppercase;
+                }
+                &:hover{
+                    a{
+                        color: var(--color-yellow)
+                    }
+                   
                 }
             }
             .dropdown_item_1{
@@ -158,17 +150,45 @@
             text-transform: uppercase;
         }
     }
+    @media screen and (max-width: 1400px) {
+        .nav-link{
+            margin: 0px 10px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .nav-link{
+            font-size: 12px;
+            margin: 0px 5px;
+        }
+        .callback_button{
+            span{
+                font-size: 14px!important;
+            }
+        }
+    }
     @media screen and (max-width: 992px) {
         .dropdown_menu {
             display: none;
         }
+        .nav-item{
+            text-align: center;
+        }
         .nav-link{
+            padding: 15px 0px;
             &:after{
                 display: none;
             }
         }
     }
     @media screen and (max-width: 767px) {
+        .navbar{
+            .navbar-brand {
+                img{
+                    height: 50px;
+                }
+            }
+        }
         .callback_button {
             padding: 0px;
             background-color: transparent;

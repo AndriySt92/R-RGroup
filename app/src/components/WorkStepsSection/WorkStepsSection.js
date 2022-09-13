@@ -6,28 +6,32 @@ export const WorkStepsSection = () => {
   return (
     <section className="work_steps text-center">
       <div className="row">
-        <div className="col-12 text-center">
-          <h3>Лише 3 кроки до здійснення плану</h3>
+        <div className="col-12">
+          <h3 className='text-center'>Лише 3 кроки до здійснення плану</h3>
         </div>
       </div>
-      <div className="row px-5 w-lg-20">
-        <div className="col-md-4 work_steps_item">
-          <div>
-            <img src={phone} alt="" />
+      <div className="row">
+        <div className="col-12">
+          <div className="work_steps_items">
+            <div className="work_steps_item">
+              <div>
+                <img src={phone} alt="" />
+              </div>
+              <p>Ваша заявка або дзвінок</p>
+            </div>
+            <div className="work_steps_item">
+              <div>
+                <img src={consultation} alt="" />
+              </div>
+              <p>Консультація спеціаліста</p>
+            </div>
+            <div className="work_steps_item">
+              <div>
+                <img src={trophy} alt="" />
+              </div>
+              <p>Виконуємо роботу</p>
+            </div>
           </div>
-          <p>Ваша заявка або дзвінок</p>
-        </div>
-        <div className="col-md-4  work_steps_item">
-          <div>
-            <img src={consultation} alt="" />
-          </div>
-          <p>Консультація спеціаліста</p>
-        </div>
-        <div className="col-md-4 work_steps_item">
-          <div>
-            <img src={trophy} alt="" />
-          </div>
-          <p>Виконуємо роботу</p>
         </div>
       </div>
     </section>

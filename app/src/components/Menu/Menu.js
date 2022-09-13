@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './menu.scss'
 import { logo, phoneGif } from '../../assets'
-import { Modal } from '../Modal/Modal'
 
 const servicesItems = [
   { title: 'Ремонтні роботи', linkTo: '/repairWorks' },
@@ -34,7 +33,7 @@ export const Menu = () => {
           </NavLink>
           <div className="callback_button d-block d-lg-none" data-bs-target="#exampleModal" data-bs-toggle="modal">
               <img src={phoneGif} alt="" />
-              <span className="hoverSpan">Замовити дзвінок</span>
+              <span>Замовити дзвінок</span>
             </div>
           <button
             ref={hamburgerButton}
@@ -67,6 +66,11 @@ export const Menu = () => {
                 </ul>
               </li>
               <li className="nav-item">
+                <NavLink to="/price" className="nav-link" onClick={handleClick}>
+                  Ціни 
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink to="/portfolio" className="nav-link" onClick={handleClick}>
                   Портфоліо
                 </NavLink>
@@ -84,7 +88,7 @@ export const Menu = () => {
             </ul>
             <div className="callback_button ms-auto d-lg-block d-none" data-bs-target="#exampleModal" data-bs-toggle="modal">
               <img src={phoneGif} alt="" />
-              <span className="hoverSpan">Замовити дзвінок</span>
+              <span>Замовити дзвінок</span>
             </div>
           </div>
         </div>
