@@ -5,7 +5,7 @@ export const OrderTypeSection = ({ title, content }) => {
   return (
     <section className="orderType">
       <div className="row">
-        <div className="col-12 text-md-start text-lg-center mb-3">
+        <div className="col-12 text-md-start text-lg-center">
           <h3>{title}</h3>
         </div>
       </div>
@@ -14,7 +14,7 @@ export const OrderTypeSection = ({ title, content }) => {
           return (
             <div key={index} className="col-lg-4 col-md-12">
               {order.imgSrc && <img src={order.imgSrc} alt="" />}
-              <div className="order_type_content">
+              <div className="order_type_content mb-3 mb-lg-0">
                 {order.isTrend && (
                   <div className="popular-label">
                     <div className="tag">

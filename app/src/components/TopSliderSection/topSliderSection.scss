@@ -6,51 +6,18 @@
         min-height: 406px;
      }
 
-     @keyframes plasterWorksSlide {
-        0%{
-           background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
-        }
-     
-        // 25%{
-        //    background-image: url("../../assets/images/repair-2.jpg");
-        // }
-     
-        // 25.1%{
-        //    background-image: url("../../assets/images/repair-2.jpg");
-        // }
-     
-        25%{
-           background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
-        }
-        25.01%{
-           background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
-        }
-     
-        75%{
-            background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
-        }
-     
-        75.01%{
-                  background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
-        }
-     
-        100%{
-           background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
-        }
-     }
-
-     @media screen and (max-width: 1400px){
+     @media screen and (max-width: 1399px){
         &_block{
             min-height: 364px;
         }
      }
 
-     @media screen and (max-width: 1200px){
+     @media screen and (max-width: 1199px){
         &_block{
             min-height: 303px;
         }
      }
-     @media screen and (max-width: 992px){
+     @media screen and (max-width: 991px){
         &_block{
             min-height: 223px;
         }
@@ -72,7 +39,7 @@
             }
         }
      }
-     @media screen and (max-width: 768px){
+     @media screen and (max-width: 767px){
         &_block{
             min-height: 344px;
         }
@@ -111,39 +78,29 @@
      }
 }
 
-  
- @keyframes plasterWorksSlide {
-    0%{
-       background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
-    }
- 
-    // 25%{
-    //    background-image: url("../../assets/images/repair-2.jpg");
-    // }
- 
-    // 25.1%{
-    //    background-image: url("../../assets/images/repair-2.jpg");
-    // }
- 
-    25%{
-       background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
-    }
-    25.01%{
-       background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
-    }
- 
-    75%{
-        background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
-    }
- 
-    75.01%{
-              background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
-    }
- 
-    100%{
-       background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
-    }
- }
+@keyframes plasterWorksSlide {
+   0%{
+      background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+   }
+   25%{
+      background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+   }
+   25.01%{
+      background-image: url("../../assets/images/plasterWorks/plaster-work-slider-2.webp");
+   }
+   75%{
+       background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+   }
+
+   75.01%{
+             background-image: url("../../assets/images/plasterWorks/plaster-works-slider-3.webp");
+   }
+
+   100%{
+      background-image: url("../../assets/images/plasterWorks/plaster-works-slider-1.jpg");
+   }
+}
+
 
  @keyframes decorativePlasterSlide {
     0%{
@@ -239,5 +196,36 @@
  
     100%{
        background-image: url("../../assets/images/roofingWorks/roofing-works-slide-1.webp");
+    }
+ }
+ 
+ @keyframes concreteWorksSlide {
+    0%{
+      background-image: url("../../assets/images/services/services-7.jpg")
+    }
+ 
+    12%{
+      background-image: url("../../assets/images/services/services-7.jpg")
+    }
+
+    25%{
+      background-image: url("../../assets/images/services/services-7.jpg")
+    }
+ 
+    50%{
+      background-image: url("../../assets/images/tips/tip-2-2.webp");
+    }
+    50.01%{
+      background-image: url("../../assets/images/tips/tip-2-2.webp");
+    } 
+    75%{
+      background-image: url("../../assets/images/tips/tip-2-2.webp");
+    } 
+    88%{
+      background-image: url("../../assets/images/tips/tip-2-2.webp");
+    } 
+
+    100%{
+      background-image: url("../../assets/images/services/services-7.jpg")
     }
  }

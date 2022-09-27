@@ -1,13 +1,4 @@
 .tips{
-    margin-bottom: 80px;
-    a{
-        
-    }
-    .tips_items{
-        &:first-child {
-            border-top: 1px solid #ccc;
-        }
-    }
     .tips_item {
         display: flex;
         align-items: center;
@@ -19,12 +10,11 @@
         padding-top: 20px;
         cursor: pointer;
         &:hover {
-            color: var(--color-blue-hover)!important;
+            color: var(--color-yellow);
         }
         &_img {
             height: 240px;
             max-width: 360px;
-            margin: 0px auto;
             width: 100%;
             box-shadow: 3px 3px 3px rgba(25, 25, 30, 0.3);
             img {
@@ -36,6 +26,9 @@
                 background: #fff;
                 opacity: 0.8;
             }
+        }
+        &:last-child {
+            border-bottom: none;
         }
     }
 

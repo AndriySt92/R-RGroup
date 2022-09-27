@@ -1,8 +1,6 @@
 import React from 'react'
 import './plasterWorks.scss'
 import {
-  workOrder,
-  materials,
   plaster1,
   plaster2,
   plaster3,
@@ -12,12 +10,12 @@ import {
   plaster7,
   plaster8,
 } from '../../assets'
-import { Table } from '../../components/Table/Table'
 import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
-import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
+import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
+import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
 const plasterWorksList = [
   {
@@ -137,57 +135,15 @@ export const PlasterWorks = () => {
             </div>
           </div>
         </div>
-        {/* <section className="consultation">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="consultation_slider"></div>
-            </div>
-            <div className="col-md-6 px-5">
-              <Form title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'} subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'} />
-            </div>
-          </div>
-        </section> */}
         <TopSliderSection animationSlide='plasterWorksSlide' />
+        <WorkStepsSection />
         <OrderTypeSection
           title={plasterOrderType.mainTitle}
           content={plasterOrderType.ordersTypeList}
         />
-        <section className="work_order">
-          <div className="container">
-            <h1 className="page_title">Порядок роботи</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={workOrder} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
         <Gallery images={plasterGallery} />
         <AccordionFaq faq={plasterFaq} />
-        <section className="materials">
-          <div className="container">
-            <h1 className="page_title">Матеріали</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={materials} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="listWorks">
-          <div className="container">
-            <div className="row mb-3">
-              <div className="col-12">
-                <h3>Список робіт які ми виконуємо:</h3>
-              </div>
-            </div>
-            <div className="row">
-              {plasterWorksList.map((item) => (
-                <Table list={item} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <WorksListsSection worksLists={plasterWorksList} />
       </div>
     </div>
   )

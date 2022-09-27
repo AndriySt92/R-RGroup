@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './portfolio.scss'
 import {
   C001_1,
@@ -810,8 +810,8 @@ export const Portfolio = () => {
   }, [pageNumber])
 
   const scrollToTop = () => {
-    if(projectsWrap.current){
-      window.scrollTo(0, projectsWrap.current.offsetTop - 10);
+    if (projectsWrap.current) {
+      window.scrollTo(0, projectsWrap.current.offsetTop - 10)
     }
   }
 
@@ -821,17 +821,17 @@ export const Portfolio = () => {
   }
 
   const handleClickPrevPage = (e) => {
-    e.preventDefault() 
-    setPageNumber(pageNumber-1)
+    e.preventDefault()
+    setPageNumber(pageNumber - 1)
     scrollToTop()
   }
 
   const handleClickNextPage = (e) => {
     e.preventDefault()
-    setPageNumber(pageNumber+1)
+    setPageNumber(pageNumber + 1)
     scrollToTop()
   }
-  
+
   return (
     <div ref={projectsWrap} className="portfolio">
       <div className="container">
@@ -847,7 +847,9 @@ export const Portfolio = () => {
           <div className="col-12 text-center">
             <nav aria-label="Page navigation example">
               <ul className="pagination pagination-md">
-                <li className={`page-item ${pageNumber === 1 ? 'disable' : ''}`} onClick={handleClickPrevPage}>
+                <li
+                  className={`page-item ${pageNumber === 1 ? 'disable' : ''}`}
+                  onClick={handleClickPrevPage}>
                   <a className="page-link">Назад</a>
                 </li>
                 {[1, 2, 3, 4].map((item) => (
@@ -855,7 +857,9 @@ export const Portfolio = () => {
                     <a className={`page-link ${pageNumber == item ? 'active' : ''}`}>{item}</a>
                   </li>
                 ))}
-                <li className={`page-item ${pageNumber === 4 ? 'disable' : ''}`} onClick={handleClickNextPage}>
+                <li
+                  className={`page-item ${pageNumber === 4 ? 'disable' : ''}`}
+                  onClick={handleClickNextPage}>
                   <a className="page-link" href="">
                     Вперед
                   </a>
@@ -864,44 +868,27 @@ export const Portfolio = () => {
             </nav>
           </div>
         </div>
-        <section className="projects_desc">
+        <section className="project_structure">
           <div className="row">
             <div className="col-12">
-              <h3 className="mb-4">Склад проекту приватного будинку:</h3>
+              <h3>Склад проекту приватного будинку:</h3>
               <ul className="mb-4 ml-4">
-                <li>
-                  <span>
-                    генеральний план (розробляється індивідуально під ваш ділянку, входить у
-                    вартість проекту);
-                  </span>
-                </li>
-                <li>
-                  <span>плани поверхів;</span>
-                </li>
-                <li>
-                  <span>фасади;</span>
-                </li>
-                <li>
-                  <span>розрізи;</span>
-                </li>
-                <li>
-                  <span>візуалізація;</span>
-                </li>
-                <li>
-                  <span>план покрівлі, розкладка і візуалізація крокiв;</span>
-                </li>
-                <li>
-                  <span>план фундаментів, їх армування, розрізи;</span>
-                </li>
-                <li>
-                  <span>готові плани поверхів;</span>
-                </li>
-                <li>
-                  <span>план перекриття (плити, балки, моноліт);</span>
-                </li>
-                <li>
-                  <span>підрахунок основних матеріалів і робіт.</span>
-                </li>
+                {[
+                  'генеральний план (розробляється індивідуально під ваш ділянку, входить увартість проекту);',
+                  'плани поверхів;',
+                  'фасади;',
+                  'розрізи;',
+                  'візуалізація;',
+                  'план покрівлі, розкладка і візуалізація крокiв;',
+                  'план фундаментів, їх армування, розрізи;',
+                  'готові плани поверхів;',
+                  'план перекриття (плити, балки, моноліт);',
+                  'підрахунок основних матеріалів і робіт.',
+                ].map((item) => (
+                  <li key={item}>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
               <p>
                 У будь-який готовий проект можна внести зміни. Зміна кольорів фасадів, перегородок

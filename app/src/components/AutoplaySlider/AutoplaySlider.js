@@ -54,16 +54,24 @@ export const AutoplaySlider = ({ slide }) => {
   }
 
   return (
-    <div className="autoplaySlider">
-      <h3 className="mb-4">Матеріали з яких ми будуємо:</h3>
-      <Slider {...settings}>
-        {sliderItems.map((slide) => (
-          <div key={slide.title} className="slick_slider_item">
-            <img src={slide.imgSrc} alt="" />
-            <h6>{slide.title}</h6>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <section className="autoplaySlider">
+      <div className="row">
+        <div className="col-12">
+          <h3>Матеріали з яких ми будуємо:</h3>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <Slider {...settings}>
+            {sliderItems.map((slide) => (
+              <div key={slide.title} className="slick_slider_item">
+                <img src={slide.imgSrc} alt="" />
+                <h6>{slide.title}</h6>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </section>
   )
 }

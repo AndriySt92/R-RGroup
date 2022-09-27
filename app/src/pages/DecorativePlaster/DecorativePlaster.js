@@ -1,12 +1,12 @@
 import React from 'react'
 import './decorativePlaster.scss'
-import { workOrder, materials, decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16 } from '../../assets'
-import { Table } from '../../components/Table/Table'
+import { decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16 } from '../../assets'
 import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
-import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
+import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
+import { WorkOrderSection } from '../../components/WorkOrderSection/WorkOrderSection'
 
 const decorativePlasterList = [
   {
@@ -137,48 +137,10 @@ export const DecorativePlaster = () => {
           title={decorativePlasterOrderType.mainTitle}
           content={decorativePlasterOrderType.ordersTypeList}
         />
-        <section className="work_order">
-          <div className="container">
-            <h1 className="page_title">Порядок роботи</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={workOrder} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <WorkOrderSection />
         <Gallery images={decPlasterImg} />
-        <section className="home_faq">
-          <div className="row">
-            <div className="col-12">
-              <AccordionFaq faq={decorativePlasterFaq} />
-            </div>
-          </div>
-        </section>
-        <section className="materials">
-          <div className="container">
-            <h1 className="page_title">Матеріали</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={materials} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="listWorks">
-          <div className="container">
-            <div className="row mb-3">
-              <div className="col-12">
-                <h3>Список робіт які ми виконуємо:</h3>
-              </div>
-            </div>
-            <div className="row">
-              {decorativePlasterList.map((item) => (
-                <Table list={item} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <AccordionFaq faq={decorativePlasterFaq} />
+        <WorksListsSection worksLists={decorativePlasterList} />
       </div>
     </div>
   )

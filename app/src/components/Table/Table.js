@@ -4,7 +4,7 @@ import './table.scss'
 export const Table = ({ list }) => {
  
   return (
-    <div className="table mb-5">
+    <div className="table mb-3 mb-lg-4 mb-xl-5">
       <div className="row">
         <div className="col-12">
           <table className="table table-striped table-hover">

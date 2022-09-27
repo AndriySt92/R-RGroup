@@ -67,60 +67,47 @@ export const Project = () => {
               )}
             </div>
             <p className="project_left_desc">{project.desc}</p>
-            <div className="project_left_photos">
+            <section className="project_left_photos">
               <Gallery
                 images={project.images}
                 group={`${project.name}`}
                 title="Фасади:"
                 imgHeight150
               />
-            </div>
-            <div className="project_left_plans">
+            </section>
+            <section className="project_left_plans">
               <Gallery
                 images={project.planImages}
                 group={`${project.name}`}
                 title="Плани:"
                 imgHeight150
               />
-            </div>
-            <div className="project_left_pricing">
-              <h6>В ціну проекту входить:</h6>
-              <ul className="mb-5 mt-3">
-                <li>
-                  <span>
-                    генеральний план (розробляється індивідуально під ваш ділянку, входить у
-                    вартість проекту);
-                  </span>
-                </li>
-                <li>
-                  <span>плани поверхів;</span>
-                </li>
-                <li>
-                  <span>фасади;</span>
-                </li>
-                <li>
-                  <span>розрізи;</span>
-                </li>
-                <li>
-                  <span>візуалізація;</span>
-                </li>
-                <li>
-                  <span>план покрівлі, розкладка і візуалізація крокiв;</span>
-                </li>
-                <li>
-                  <span>план фундаментів, їх армування, розрізи;</span>
-                </li>
-                <li>
-                  <span>готові плани поверхів;</span>
-                </li>
-                <li>
-                  <span>план перекриття (плити, балки, моноліт);</span>
-                </li>
-                <li>
-                  <span>підрахунок основних матеріалів і робіт.</span>
-                </li>
-              </ul>
-            </div>
+            </section>
+            <section className="project_structure">
+              <div className="row">
+                <div className="col-12">
+                  <h3>У ціну проету входить:</h3>
+                  <ul className="ml-4">
+                    {[
+                      'генеральний план (розробляється індивідуально під ваш ділянку, входить увартість проекту);',
+                      'плани поверхів;',
+                      'фасади;',
+                      'розрізи;',
+                      'візуалізація;',
+                      'план покрівлі, розкладка і візуалізація крокiв;',
+                      'план фундаментів, їх армування, розрізи;',
+                      'готові плани поверхів;',
+                      'план перекриття (плити, балки, моноліт);',
+                      'підрахунок основних матеріалів і робіт.',
+                    ].map((item) => (
+                      <li key={item}>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
           </div>
           <div className="project_right col-xl-3 col-lg-12">
             <div className="project_right_img d-none d-xl-block">
@@ -146,7 +133,7 @@ export const Project = () => {
               </button>
             </div>
             <div className="project_right_offer mt-5 d-none d-xl-block">
-              <h5>Інші проекти:</h5>
+              <h5 className='mb-2'>Інші проекти:</h5>
               <div className="row">
                 <ProjectItem
                   houseArea={offerProjects[0].houseArea}
@@ -166,7 +153,7 @@ export const Project = () => {
               </div>
             </div>
             <div className="offer_project d-block d-xl-none">
-              <h3 className="mb-3">Iнші проекти:</h3>
+              <h3 className="mb-4">Iнші проекти:</h3>
               <Projects projects={offerProjects} />
             </div>
           </div>

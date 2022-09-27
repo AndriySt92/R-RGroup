@@ -16,7 +16,7 @@ import { Portfolio } from './pages/Portfolio/Portfolio'
 import { Tips } from './pages/Tips/Tips'
 import { Project } from './pages/Project/Project'
 import { Tip } from './pages/Tip/Tip'
-import { ScrollToTop } from './components/ScrollToTop/ScrollToTop'
+import { ScrollToTop } from './hoc/ScrollToTop/ScrollToTop'
 
 function App() {
   return (

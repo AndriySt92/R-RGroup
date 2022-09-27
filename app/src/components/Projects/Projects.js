@@ -16,8 +16,8 @@ export const Projects = ({ title, subtitle, projects, withButton }) => {
       {title && (
         <div className="row text-center projects_title">
           <div className="col-12 mb-5">
-            <h3>{title}</h3>
-            {subtitle && <p className="mt-2">{subtitle}</p>}
+            <h3 className='mb-1 mb-md-3'>{title}</h3>
+            {subtitle && <p>{subtitle}</p>}
           </div>
         </div>
       )}

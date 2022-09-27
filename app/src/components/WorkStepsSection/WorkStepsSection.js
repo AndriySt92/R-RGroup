@@ -1,6 +1,6 @@
 import React from 'react'
 import './workStepsSection.scss'
-import { trophy, phone, consultation } from '../../assets'
+import { trophy, phone2, consultation } from '../../assets'
 
 export const WorkStepsSection = () => {
   return (
@@ -15,7 +15,7 @@ export const WorkStepsSection = () => {
           <div className="work_steps_items">
             <div className="work_steps_item">
               <div>
-                <img src={phone} alt="" />
+                <img src={phone2} alt="" />
               </div>
               <p>Ваша заявка або дзвінок</p>
             </div>

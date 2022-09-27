@@ -3,9 +3,9 @@ import './accordion.scss'
 
 export const AccordionFaq = ({ faq }) => {
   return (
-    <section className="accordion_faq pt-5">
+    <section className="accordion_faq">
       <div className="row">
-        <div className="col-12 mb-4">
+        <div className="col-12">
           <h3>Відповіді на популярні питання від клієнтів:</h3>
         </div>
       </div>

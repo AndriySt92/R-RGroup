@@ -11,7 +11,7 @@ export const ProjectItem = (project) => {
   }
 
   return (
-    <div className="col-sm-12 col-md-6 col-xl text-center mb-4 project_item">
+    <div className="col-sm-12 col-md-6 col-lg-3 col-xl text-center mb-4 project_item">
         <div className="project_item_inner" onClick={handleClick}>
           <div className="img_wrap">
             <img className="img-fluid" src={project.mainImg} alt="" />

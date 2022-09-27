@@ -1,11 +1,11 @@
 import React from 'react'
 import './concreteWorks.scss'
-import { workOrder, materials, concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8 } from '../../assets'
-import { Table } from '../../components/Table/Table'
+import { concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8 } from '../../assets'
 import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
-import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
+import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
+import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
 const concreteWorksList = [
   {
@@ -85,53 +85,11 @@ export const ConcreteWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='plasterWorksSlide' />
-        <section className="work_order">
-          <div className="container">
-            <h1 className="page_title">Порядок роботи</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={workOrder} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <TopSliderSection animationSlide='concreteWorksSlide' />
+        <WorkStepsSection />
         <Gallery images={concreteWorksImg} />
-        <section className="home_faq">
-          <div className="row">
-            <div className="col-12">
-              <AccordionFaq faq={concreteWorksFaq} />
-            </div>
-          </div>
-        </section>
-        <section className="materials">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <h3>Матеріали:</h3>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={materials} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="listWorks">
-          <div className="container">
-            <div className="row mb-3">
-              <div className="col-12">
-                <h3>Список робіт які ми виконуємо:</h3>
-              </div>
-            </div>
-            <div className="row">
-              {concreteWorksList.map((item) => (
-                <Table list={item} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <AccordionFaq faq={concreteWorksFaq} />
+        <WorksListsSection worksLists={concreteWorksList} />
       </div>
     </div>
   )

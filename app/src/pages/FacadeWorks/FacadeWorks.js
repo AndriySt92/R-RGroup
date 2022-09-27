@@ -1,8 +1,6 @@
 import React from 'react'
 import './facadeWorks.scss'
 import {
-  workOrder,
-  materials,
   facade1,
   facade2,
   facade3,
@@ -18,12 +16,12 @@ import {
   facade13,
   facade14,
 } from '../../assets'
-import { Table } from '../../components/Table/Table'
 import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
-import { Form } from '../../components/Form/Form'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
+import { WorkOrderSection } from '../../components/WorkOrderSection/WorkOrderSection'
+import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
 const facadeWorksList = [
   {
@@ -152,47 +150,15 @@ export const FacadeWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='facadeWorksSlide'/>
+        <TopSliderSection animationSlide="facadeWorksSlide" />
         <OrderTypeSection
           title={facadeWorksOrderType.mainTitle}
           content={facadeWorksOrderType.ordersTypeList}
         />
-        <section className="work_order">
-          <div className="container">
-            <h1 className="page_title">Порядок роботи</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={workOrder} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <WorkOrderSection />
         <Gallery images={facadeGallery} />
         <AccordionFaq faq={facadeWorksFaq} />
-        <section className="materials">
-          <div className="container">
-            <h1 className="page_title">Матеріали</h1>
-            <div className="row">
-              <div className="col-sm-12">
-                <img src={materials} alt="" className="img-fluid w-100" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="listWorks">
-          <div className="container">
-            <div className="row mb-3">
-              <div className="col-12">
-                <h3>Список робіт які ми виконуємо:</h3>
-              </div>
-            </div>
-            <div className="row">
-              {facadeWorksList.map((item) => (
-                <Table list={item} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <WorksListsSection worksLists={facadeWorksList} />
       </div>
     </div>
   )

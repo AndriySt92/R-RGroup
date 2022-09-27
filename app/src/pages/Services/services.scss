@@ -4,6 +4,11 @@
         &:hover {
             color: var(--color-yellow)!important;
         }
+        &:last-child {
+            .servises_item{
+                border-bottom: none;
+            }
+        }
     }
 
     .servises_item {
@@ -22,7 +27,6 @@
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
                 cursor: pointer;
             }
             &:hover {
@@ -30,46 +34,49 @@
                 opacity: 0.8;
             }
         }
-        @media screen and (max-width: 1400px){
-            .servises_item{ 
-                &_img {
-                    height: 230px;
-                }
-            }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .servises_item{ 
+        &_img {
+            height: 230px !important;
         }
-        @media screen and (max-width: 1200px){
-            .servises_item{
-                &_img {
-                    height: 193px;
-                }
-            }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .servises_item{
+        &_img {
+            height: 210px !important;
         }
-        @media screen and (max-width: 992px){
-            .servises_item{
-                justify-content: center;
-                &_img {
-                    margin: 0px auto;
-                    height: 263px;
-                }
-                &_title {
-                    margin-top: 20px;
-                    text-align: center;
-                }
-            }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .servises_item{
+        justify-content: center;
+        &_img {
+            margin: 0px auto;
+            height: 263px !important;
         }
-        @media screen and (max-width: 434px){
-            .servises_item{
-                justify-content: center;
-                &_img {
-                    margin: 0px auto;
-                    max-width: 290px;
-                    height: 190px;
-                }
-                &_title {
-                    margin-top: 20px;
-                    text-align: center;
-                }
-            }
+        &_title {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 434px){
+    .servises_item{
+        justify-content: center;
+        &_img {
+            margin: 0px auto;
+            height: 215px !important;
+        }
+        &_title {
+            margin-top: 20px;
+            text-align: center;
         }
     }
 }

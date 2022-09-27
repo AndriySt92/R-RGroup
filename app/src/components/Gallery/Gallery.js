@@ -9,7 +9,7 @@ export const Gallery = ({ images, title, imgHeight150}) => {
   return (
     <section className="gallery">
       <div className="row">
-        <div className="col-12 mb-3">
+        <div className="col-12">
           <h3>{title ? title : 'Фото робіт:'}</h3>
         </div>
       </div>

@@ -141,6 +141,10 @@
                 width: 100%;
                 height: 100%;
             }
+            &:hover{
+                background: #fff;
+                opacity: 0.8;
+            }
         }
         button{
             width: 100%;
@@ -152,7 +156,9 @@
             padding: 5px 10px;
             border: none;
             outline: none;
-            transition: all 0.5s ease;
+            &:hover{
+                background-color: var(--color-blue-hover);
+            }
         }
     }
 }

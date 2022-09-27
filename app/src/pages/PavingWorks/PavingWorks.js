@@ -99,7 +99,7 @@ export const PavingWorks = () => {
         <WorkStepsSection />
         <section className="pricing">
           <div className="row">
-            <div className="col-12 mb-3">
+            <div className="col-12">
               <h3>Прайс на укладання бруківки:</h3>
             </div>
           </div>
@@ -130,7 +130,7 @@ export const PavingWorks = () => {
         </section>
         <section className="get_free">
           <div className="row">
-            <div className="col-12 mb-3">
+            <div className="col-12">
               <h3>Отримай безкоштовно:</h3>
             </div>
           </div>
@@ -157,7 +157,7 @@ export const PavingWorks = () => {
         </section>
         <section className="popular_orders">
           <div className="row">
-            <div className="col-12 mb-3">
+            <div className="col-12">
               <h3>Популярні замовлення:</h3>
             </div>
           </div>

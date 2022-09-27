@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className="col-12 text-center">
               <h2>Зв'язатися з менеджером</h2>
               <h4>
-                Телефонуйте за номером телефону <b>+38 (096) 112 112 6</b>{' '}
+                Телефонуйте за номером телефону <a className='footer_number' href='tel:+380961121126' target='_parent'>+38 (096) 112 112 6</a> або <a className='footer_number' href='tel:+380671121126' target='_parent'>+38 (067) 112 112 6</a>{' '}
               </h4>
               <h2>
                 Приймаємо дзвінки <b>з 9:00 до 17:00</b>
@@ -24,10 +24,10 @@ export const Footer = () => {
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="row">
-              <div className="col-lg-3 mb-4  text-center text-lg-start">
-                <span className="mt-1">R&RGroup - будівельні послуги</span>
+              <div className="col-lg-3 mb-2 mb-xl-4  text-center text-lg-start">
+                <span className="mt-1">R&Rgroup - будівельні послуги</span>
               </div>
-              <div className="col-lg-9 mb-4 d-flex justify-content-md-center justify-content-lg-end">
+              <div className="col-lg-9 mb-2 mb-xl-4 d-flex justify-content-md-center justify-content-lg-end">
                 <ul className="nav footer_nav">
                   <li>
                     <Link to="/">Будинки під ключ</Link>
@@ -36,23 +36,31 @@ export const Footer = () => {
                     <Link to="/services">Будівельні послуги</Link>
                   </li>
                   <li>
+                    <Link to="/price">Ціни</Link>
+                  </li>
+                  <li>
                     <Link to="/portfolio">Портфоліо</Link>
                   </li>
                   <li>
                     <Link to="/contacts">Контакти</Link>
                   </li>
                   <li>
-                    <Link to="/tips">Контакти</Link>
+                    <Link to="/tips">Поради</Link>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-6 mb-4 text-center text-lg-start">
-                <p className="mb-4">© Усі права захищено 2021&nbsp;</p>
-                <p>
-                  <a className="footer_menu_number" href="tel:+380961121126">
+              <div className="col-lg-6 mb-2 mb-xl-4 text-center text-lg-start">
+                <p className="mb-2 mb-xl-4">© Усі права захищено 2022&nbsp;</p>
+                <p className="mb-0 mb-sm-2">
+                  <a className="footer_number" href="tel:+380961121126">
                     +38(096) 112-112-6
+                  </a>
+                </p>
+                <p>
+                  <a className="footer_number" href="tel:+380671121126">
+                    +38(067) 112-112-6
                   </a>
                 </p>
               </div>
