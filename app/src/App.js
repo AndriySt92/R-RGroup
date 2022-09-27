@@ -17,6 +17,7 @@ import { Tips } from './pages/Tips/Tips'
 import { Project } from './pages/Project/Project'
 import { Tip } from './pages/Tip/Tip'
 import { ScrollToTop } from './hoc/ScrollToTop/ScrollToTop'
+import { NotFound } from './pages/NotFound/NotFound'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="tips" element={<Tips />} />
             <Route path="tip/:urlTitle" element={<Tip />} />
             <Route path="project/:name" element={<Project />} />
+            <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>
       </ScrollToTop>

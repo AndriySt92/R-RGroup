@@ -1,0 +1,39 @@
+.not_found{
+    height: 55vh;
+    margin-top: 100px;
+    text-align: center;
+    overflow-x: hidden;
+    h1{
+        font-size: 100px !important;
+        color: var(--color-yellow);
+        margin-bottom: 30px;
+    }
+    h2{
+        color: var(--color-blue);
+        font-size: 50px !important;
+        margin-bottom: 30px;
+    }
+    span{
+        font-size: 22px;
+        line-height: 46px;
+        color: var(--color-blue);
+        button{
+            border: none;
+            outline: none;
+            background-color: var(--color-blue);
+            color: #fff;
+            font-size: 18px;
+            padding: 5px 20px;
+            a{
+                color: #fff;
+            }
+            &:hover{
+                color: #fff;
+                background-color: var(--color-blue-hover);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}
