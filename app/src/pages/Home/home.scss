@@ -3,6 +3,11 @@
    &_title{
       margin-top: 60px!important;
    } 
+   .top_autoplay_slider{
+      .slick-list{
+         background: none !important;
+      }
+   }
    .work_order{
       &_item {
          img {

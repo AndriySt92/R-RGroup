@@ -25,6 +25,7 @@ import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSec
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import { Loader } from '../../components/Loader/Loader'
 import { Projects } from '../../components/Projects/Projects'
+import Slider from 'react-slick'
 
 const homeFaq = [
   {
@@ -136,6 +137,19 @@ const workOrderImages = [workOrder1, workOrder2, workOrder3, workOrder4, workOrd
 export const Home = () => {
   const [projects, setProjects] = useState([])
 
+  const settings = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    fade: true,
+    pauseOnHover: false,
+    touchMove: false,
+    speed: 600,
+    autoplaySpeed: 4000,
+    cssEase: 'ease-out',
+  }
+
   useEffect(() => {
     if (projects.length === 4) {
       return
@@ -149,22 +163,15 @@ export const Home = () => {
 
   return (
     <div className="home">
-      <div>
-        <div
-          id="carouselExampleControlsNoTouching"
-          className="carousel slide carousel-fade z-depth-1-half"
-          data-bs-ride="carousel"
-          data-bs-touch
-          data-bs-interval>
-          <div className="carousel-inner">
-            <div className="carousel-item active" data-bs-interval="3000">
-              <img src={homeTopSlider1} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item" data-bs-interval="3000">
-              <img src={homeTopSlider2} className="d-block w-100" alt="..." />
-            </div>
+      <div className='top_autoplay_slider'>
+        <Slider {...settings}>
+          <div>
+            <img src={homeTopSlider1} className="d-block w-100" alt="..." />
           </div>
-        </div>
+          <div>
+            <img src={homeTopSlider2} className="d-block w-100" alt="..." />
+          </div>
+        </Slider>
       </div>
       <div className="container">
         <div className="page_title home_title">
