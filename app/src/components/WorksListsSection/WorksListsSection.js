@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table } from '../Table/Table'
 
-export const WorksListsSection = ({worksLists}) => {
+export const WorksListsSection = ({worksListsData}) => {
   return (
     <section className="works_lists" style={{marginBottom: '0px'}}>
     <div className="container">
@@ -11,8 +11,8 @@ export const WorksListsSection = ({worksLists}) => {
         </div>
       </div>
       <div className="row">
-        {worksLists.map((item) => (
-          <Table list={item} />
+        {worksListsData.map((item) => (
+          <Table key={item.title} list={item} />
         ))}
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import './roofingWorks.scss'
 import {
   roofing1,
   roofing2,
@@ -13,22 +12,25 @@ import {
   roofing10,
   roofing11,
   roofing12,
+  roofingWorksSlide1,
+  roofingWorksSlide2,
+  roofingWorksSlide3,
 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
 
-const roofingWorksList = [
+const worksListsData = [
   {
     title: 'Монтаж покрівлі, робота',
     works: ['Металочерепиця', 'Забудова', 'Kомпозитна', "М'яка покрівля, (катепал)"],
   },
 ]
 
-const roofingWorksOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень штукатурних робіт у нас',
   ordersTypeList: [
     {
@@ -52,7 +54,7 @@ const roofingWorksOrderType = {
   ],
 }
 
-const roofingWorksFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'В яку пору року краще всього почати установлення покрівлі?',
@@ -72,7 +74,7 @@ const roofingWorksFaq = [
   },
 ]
 
-const roofimgWorksImg = [
+const galleryImages = [
   roofing1,
   roofing2,
   roofing3,
@@ -87,6 +89,9 @@ const roofimgWorksImg = [
   roofing12,
 ]
 
+const slideImages = [roofingWorksSlide1, roofingWorksSlide2, roofingWorksSlide3]
+
+
 export const RoofingWorks = () => {
   return (
     <div className="roofing_works">
@@ -98,15 +103,15 @@ export const RoofingWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='roofingWorksSlide' />
+        <TopSliderSection slideImages={slideImages} />
         <WorkStepsSection />
         <OrderTypeSection
-          title={roofingWorksOrderType.mainTitle}
-          content={roofingWorksOrderType.ordersTypeList}
+          title={orderTypeData.mainTitle}
+          content={orderTypeData.ordersTypeList}
         />
-        <Gallery images={roofimgWorksImg} />
-        <AccordionFaq faq={roofingWorksFaq} />
-        <WorksListsSection worksLists={roofingWorksList} />
+        <Gallery images={galleryImages} />
+        <FaqSection faqData={faqData} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )

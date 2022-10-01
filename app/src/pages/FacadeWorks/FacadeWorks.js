@@ -1,5 +1,4 @@
 import React from 'react'
-import './facadeWorks.scss'
 import {
   facade1,
   facade2,
@@ -15,15 +14,18 @@ import {
   facade12,
   facade13,
   facade14,
+  facadeWorksSlide1,
+  facadeWorksSlide2,
+  facadeWorksSlide3,
 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorkOrderSection } from '../../components/WorkOrderSection/WorkOrderSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
-const facadeWorksList = [
+const worksListsData = [
   {
     title: 'Види фасадних робіт',
     works: [
@@ -62,7 +64,7 @@ const facadeWorksList = [
   },
 ]
 
-const facadeWorksOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень штукатурних робіт у нас',
   ordersTypeList: [
     {
@@ -107,7 +109,7 @@ const facadeWorksOrderType = {
   ],
 }
 
-const facadeWorksFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Чи можна наносити клейові і фінішні суміші без використання утеплювача?',
@@ -122,7 +124,7 @@ const facadeWorksFaq = [
   },
 ]
 
-const facadeGallery = [
+const galleryImages = [
   facade1,
   facade2,
   facade3,
@@ -139,6 +141,9 @@ const facadeGallery = [
   facade14,
 ]
 
+const slideImages = [facadeWorksSlide1, facadeWorksSlide2, facadeWorksSlide3]
+
+
 export const FacadeWorks = () => {
   return (
     <div className="facade_work">
@@ -150,15 +155,15 @@ export const FacadeWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide="facadeWorksSlide" />
+        <TopSliderSection slideImages={slideImages} />
         <OrderTypeSection
-          title={facadeWorksOrderType.mainTitle}
-          content={facadeWorksOrderType.ordersTypeList}
+          title={orderTypeData.mainTitle}
+          content={orderTypeData.ordersTypeList}
         />
         <WorkOrderSection />
-        <Gallery images={facadeGallery} />
-        <AccordionFaq faq={facadeWorksFaq} />
-        <WorksListsSection worksLists={facadeWorksList} />
+        <Gallery images={galleryImages} />
+        <FaqSection faqData={faqData} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )

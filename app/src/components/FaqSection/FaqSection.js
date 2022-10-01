@@ -1,7 +1,7 @@
 import React from 'react'
-import './accordion.scss'
+import './faqSection.scss'
 
-export const AccordionFaq = ({ faq }) => {
+export const FaqSection = ({ faqData }) => {
   return (
     <section className="accordion_faq">
       <div className="row">
@@ -12,7 +12,7 @@ export const AccordionFaq = ({ faq }) => {
       <div className="row">
         <div className="col-12">
           <div className="accordion" id="accordionExample">
-            {faq.map(({ id, question, answer }) => {
+            {faqData.map(({ id, question, answer }) => {
               return (
                 <div className="accordion-item" key={id}>
                   <h2 className="accordion-header" id={`heading${id}`}>

@@ -20,14 +20,14 @@ import {
   workOrder6,
 } from '../../assets'
 import { AutoplaySlider } from '../../components/AutoplaySlider/AutoplaySlider'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import { Loader } from '../../components/Loader/Loader'
 import { Projects } from '../../components/Projects/Projects'
 import Slider from 'react-slick'
 
-const homeFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Чому краще розробити проект, ніж використовувати типовий?',
@@ -72,7 +72,7 @@ const homeFaq = [
   },
 ]
 
-const homeOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень будівництва будинків у нас',
   ordersTypeList: [
     {
@@ -123,7 +123,7 @@ const homeOrderType = {
   ],
 }
 
-const homeAutoSlider = [
+const autoplaySliderData = [
   { imgSrc: homeSlider1, title: 'Керамоблок 2НФ' },
   { imgSrc: homeSlider2, title: 'Керамзітні блоки' },
   { imgSrc: homeSlider3, title: 'Карказ' },
@@ -182,15 +182,15 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <OrderTypeSection title={homeOrderType.mainTitle} content={homeOrderType.ordersTypeList} />
+        <OrderTypeSection title={orderTypeData.mainTitle} content={orderTypeData.ordersTypeList} />
         <Projects
           title="Оберіть проект будинку"
           subtitle="Безкоштовно під ключ"
           projects={projects}
           withButton
         />
-        <AutoplaySlider slide={homeAutoSlider} />
-        <AccordionFaq faq={homeFaq} />
+        <AutoplaySlider autoplaySliderData={autoplaySliderData} />
+        <FaqSection faqData={faqData} />
         <section className="work_order">
           <div className="row">
             <div className="col-12  work_order_title">

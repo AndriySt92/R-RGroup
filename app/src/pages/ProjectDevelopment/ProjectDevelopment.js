@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './projectDevelopment.scss'
-import { Form } from '../../components/Form/Form'
 import { Projects } from '../../components/Projects/Projects'
 import { Loader } from '../../components/Loader/Loader'
 import { getRandomProjects } from '../../utils/getRandomProjects'
+import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
+import { pojectDevSlide1, pojectDevSlide2 } from '../../assets'
 
 export const ProjectDevelopment = () => {
   const [projects, setProjects] = useState([])
@@ -11,17 +12,18 @@ export const ProjectDevelopment = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
 
-    if(projects.length === 4){
-      return 
+    if (projects.length === 4) {
+      return
     }
     setProjects(getRandomProjects(4))
-
   }, [])
 
-  if(!projects.length === 4){
+  if (!projects.length === 4) {
     return <Loader />
   }
-  
+
+  const slideImages = [pojectDevSlide1, pojectDevSlide2]
+
   return (
     <div className="project_development">
       <div className="container">
@@ -32,21 +34,13 @@ export const ProjectDevelopment = () => {
             </div>
           </div>
         </div>
-        <section className="consultation">
-          <div className="row">
-            <div className="col-md-6">
-              <div className="consultation_slider"></div>
-            </div>
-            <div className="col-md-6 px-5">
-              <Form title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'} subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'} />
-            </div>
-          </div>
-        </section>
-        <Projects title='Готові проекти будинків' projects={projects} withButton />          <section className="projects_desc">
+        <TopSliderSection slideImages={slideImages} />
+        <Projects title="Готові проекти будинків" projects={projects} withButton />{' '}
+        <section className="projects_desc">
           <div className="row">
             <div className="col-12">
               <h3 className="mb-4">Склад проекту приватного будинку:</h3>
-              <ul className='mb-4 ml-4'>
+              <ul className="mb-4 ml-4">
                 <li>
                   <span>
                     генеральний план (розробляється індивідуально під ваш ділянку, входить у
@@ -84,8 +78,8 @@ export const ProjectDevelopment = () => {
               <p>
                 У будь-який готовий проект можна внести зміни. Зміна кольорів фасадів, перегородок
                 та інші дрібні зміни, які не впливають на несучі конструкції - безкоштовно. Зміни,
-                що стосуються несучих конструкцій - за невелику доплату. При внесенні платних змін або індивідуальному
-                проектуванні - аванс 30%.
+                що стосуються несучих конструкцій - за невелику доплату. При внесенні платних змін
+                або індивідуальному проектуванні - аванс 30%.
               </p>
             </div>
           </div>

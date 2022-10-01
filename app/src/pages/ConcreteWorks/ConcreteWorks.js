@@ -1,13 +1,12 @@
 import React from 'react'
-import './concreteWorks.scss'
-import { concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8, services7, tip2_2 } from '../../assets'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
-const concreteWorksList = [
+const worksListsData = [
   {
     title: 'Монолітні роботи',
     works: [
@@ -39,7 +38,7 @@ const concreteWorksList = [
   },
 ]
 
-const concreteWorksFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Швидкість виконання робіт',
@@ -72,7 +71,10 @@ const concreteWorksFaq = [
   }
 ]
 
-const concreteWorksImg = [concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8]
+const galaryImages = [concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8]
+
+const slideImages = [services7, tip2_2]
+
 
 export const ConcreteWorks = () => {
   return (
@@ -85,11 +87,11 @@ export const ConcreteWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='concreteWorksSlide' />
+        <TopSliderSection slideImages={slideImages} />
         <WorkStepsSection />
-        <Gallery images={concreteWorksImg} />
-        <AccordionFaq faq={concreteWorksFaq} />
-        <WorksListsSection worksLists={concreteWorksList} />
+        <Gallery images={galaryImages} />
+        <FaqSection faqData={faqData} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )

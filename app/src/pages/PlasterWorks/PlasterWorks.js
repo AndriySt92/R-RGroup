@@ -1,5 +1,4 @@
 import React from 'react'
-import './plasterWorks.scss'
 import {
   plaster1,
   plaster2,
@@ -9,15 +8,18 @@ import {
   plaster6,
   plaster7,
   plaster8,
+  plasterWorksSlide1,
+  plasterWorksSlide2,
+  plasterWorksSlide3
 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
-const plasterWorksList = [
+const worksListsData = [
   {
     title: 'Вид машиною штукатурки',
     works: [
@@ -29,7 +31,7 @@ const plasterWorksList = [
   },
 ]
 
-const plasterOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень штукатурних робіт у нас',
   ordersTypeList: [
     {
@@ -74,7 +76,7 @@ const plasterOrderType = {
   ],
 }
 
-const plasterFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Що необхідно для якісного виконання штукатурних робіт?',
@@ -113,7 +115,7 @@ const plasterFaq = [
   },
 ]
 
-const plasterGallery = [
+const galleryImages = [
   plaster1,
   plaster2,
   plaster3,
@@ -123,6 +125,8 @@ const plasterGallery = [
   plaster7,
   plaster8,
 ]
+
+const slideImages = [plasterWorksSlide1, plasterWorksSlide2, plasterWorksSlide3]
 
 export const PlasterWorks = () => {
   return (
@@ -135,15 +139,15 @@ export const PlasterWorks = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='plasterWorksSlide' />
+        <TopSliderSection slideImages={slideImages} />
         <WorkStepsSection />
         <OrderTypeSection
-          title={plasterOrderType.mainTitle}
-          content={plasterOrderType.ordersTypeList}
+          title={orderTypeData.mainTitle}
+          content={orderTypeData.ordersTypeList}
         />
-        <Gallery images={plasterGallery} />
-        <AccordionFaq faq={plasterFaq} />
-        <WorksListsSection worksLists={plasterWorksList} />
+        <Gallery images={galleryImages} />
+        <FaqSection faqData={faqData} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )

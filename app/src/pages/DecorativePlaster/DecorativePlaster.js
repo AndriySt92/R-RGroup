@@ -1,14 +1,13 @@
 import React from 'react'
-import './decorativePlaster.scss'
-import { decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16, decPlasterSlide1, decPlasterSlide2, decPlasterSlide3, decPlasterSlide4 } from '../../assets'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 import { WorkOrderSection } from '../../components/WorkOrderSection/WorkOrderSection'
 
-const decorativePlasterList = [
+const worksListsData = [
   {
     title: 'Види декоративної штукатурки',
     works: [
@@ -44,7 +43,7 @@ const decorativePlasterList = [
   },
 ]
 
-const decorativePlasterOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень штукатурних робіт у нас',
   ordersTypeList: [
     {
@@ -86,7 +85,7 @@ const decorativePlasterOrderType = {
   ],
 }
 
-const decorativePlasterFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Чи можна мити декоративне покриття?',
@@ -119,7 +118,10 @@ const decorativePlasterFaq = [
   },
 ]
 
-const decPlasterImg = [decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16]
+const galleryImages = [decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPlaster5, decPlaster6, decPlaster7, decPlaster8, decPlaster9, decPlaster10, decPlaster11, decPlaster12, decPlaster13, decPlaster14, decPlaster15, decPlaster16]
+
+const slideImages = [decPlasterSlide1, decPlasterSlide2, decPlasterSlide3, decPlasterSlide4]
+
 
 export const DecorativePlaster = () => {
   return (
@@ -132,15 +134,15 @@ export const DecorativePlaster = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide='decorativePlasterSlide' />
+        <TopSliderSection slideImages={slideImages} />
         <OrderTypeSection
-          title={decorativePlasterOrderType.mainTitle}
-          content={decorativePlasterOrderType.ordersTypeList}
+          title={orderTypeData.mainTitle}
+          content={orderTypeData.ordersTypeList}
         />
         <WorkOrderSection />
-        <Gallery images={decPlasterImg} />
-        <AccordionFaq faq={decorativePlasterFaq} />
-        <WorksListsSection worksLists={decorativePlasterList} />
+        <Gallery images={galleryImages} />
+        <FaqSection faqData={faqData} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )

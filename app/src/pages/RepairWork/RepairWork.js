@@ -1,5 +1,4 @@
 import React from 'react'
-import './repairWork.scss'
 import {
   materials,
   repairImg1,
@@ -14,15 +13,17 @@ import {
   repairImg10,
   repairImg11,
   repairImg12,
+  repairWorksSlide1,
+  repairWorksSlide2,
 } from '../../assets'
-import { AccordionFaq } from '../../components/AccordionFaq/AccordionFaq'
+import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { WorkOrderSection } from '../../components/WorkOrderSection/WorkOrderSection'
 import { WorksListsSection } from '../../components/WorksListsSection/WorksListsSection'
 
-const repairWorksList = [
+const worksListsData = [
   {
     title: 'Підлога',
     works: [
@@ -91,7 +92,7 @@ const repairWorksList = [
   },
 ]
 
-const repairOrderType = {
+const orderTypeData = {
   mainTitle: 'Типи замовлень ремонтних робіт у нас',
   ordersTypeList: [
     {
@@ -144,7 +145,7 @@ const repairOrderType = {
   ],
 }
 
-const repairFaq = [
+const faqData = [
   {
     id: 'One',
     question: 'Чи укладається офіційний договір?',
@@ -177,7 +178,7 @@ const repairFaq = [
   },
 ]
 
-const repairGallery = [
+const galleryImages = [
   repairImg1,
   repairImg2,
   repairImg3,
@@ -192,6 +193,9 @@ const repairGallery = [
   repairImg12,
 ]
 
+const slideImages = [repairWorksSlide1, repairWorksSlide2]
+
+
 export const RepairWork = () => {
   return (
     <div className="repair_work">
@@ -203,14 +207,14 @@ export const RepairWork = () => {
             </div>
           </div>
         </div>
-        <TopSliderSection animationSlide="repairWorksSlide" />
+        <TopSliderSection slideImages={slideImages} />
         <OrderTypeSection
-          title={repairOrderType.mainTitle}
-          content={repairOrderType.ordersTypeList}
+          title={orderTypeData.mainTitle}
+          content={orderTypeData.ordersTypeList}
         />
         <WorkOrderSection />
-        <Gallery images={repairGallery} />
-        <AccordionFaq faq={repairFaq} />
+        <Gallery images={galleryImages} />
+        <FaqSection faqData={faqData} />
         <section className="materials">
           <div className="container">
             <div className="row">
@@ -225,7 +229,7 @@ export const RepairWork = () => {
             </div>
           </div>
         </section>
-        <WorksListsSection worksLists={repairWorksList} />
+        <WorksListsSection worksListsData={worksListsData} />
       </div>
     </div>
   )
