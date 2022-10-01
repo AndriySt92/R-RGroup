@@ -151,16 +151,13 @@ export const Home = () => {
   }
 
   useEffect(() => {
-    if (projects.length === 4) {
-      return
-    }
     setProjects(getRandomProjects(4))
   }, [])
 
-  if (!projects.length === 4) {
+  if (!projects.length) {
     return <Loader />
   }
-
+  debugger
   return (
     <div className="home">
       <div className='top_autoplay_slider'>

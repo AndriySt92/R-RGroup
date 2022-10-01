@@ -15,11 +15,7 @@ export const Project = () => {
   const { name } = useParams()
 
   useEffect(() => {
-    if (offerProjects.length === 2) {
-      return
-    } else {
       setOfferProjects(getRandomProjects(2))
-    }
   }, [])
 
   useEffect(() => {
@@ -31,7 +27,7 @@ export const Project = () => {
     navigate(`/project/${name}`)
   }
 
-  if (!project.name || !offerProjects.length === 2) {
+  if (!project.name || !offerProjects.length) {
     return <Loader />
   }
 
