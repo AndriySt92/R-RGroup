@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { useLocation} from "react-router";
-import { useNavigate } from "react-router-dom";
 
 export const ScrollToTop = (props) => {
   const location = useLocation();
-  const navigation = useNavigate()
-  console.log(window.location.href)
 
   useEffect(() => {
+    if(location.search.includes('page')) return
     window.scrollTo({
         top: 0,
         left: 0,

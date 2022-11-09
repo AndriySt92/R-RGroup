@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import {useSearchParams} from 'react-router-dom'
 import './portfolio.scss'
 import {
   C001_1,
@@ -721,82 +722,6 @@ export const projects = [
     desc: 'Проект будинку з гаражем і басейном. У будинку спроектовані гостинна з другим світлом, кухня, 6 спалень, кабінет, 4 санвузли, гардеробна, пральня, комора, котельня, гараж з навісом, тераса, балкони. Під терасою - підвал на 20 м2. Окремим блоком - зона відпочинку з басейном, спортзалом і сауною. На 2-му поверсі велика тераса. Будівництво будинку',
     houseArea: '438',
   },
-  {
-    name: 'С049',
-    mainImg: C049_1,
-    images: [C049_1, C049_2, C049_3, C049_4, C049_5],
-    planImages: [C049_plan_1, C049_plan_2],
-    desc: 'Проект будинку для вузьких ділянок. У будинку спроектовані гостинна з кухнею, 4 невеликі спальні, 2 санвузли, гардеробна, комора, тераса. Під терасою - підвал на 12 м2. ',
-    houseArea: '94',
-  },
-  {
-    name: 'С050',
-    mainImg: C050_1,
-    images: [C050_1, C050_2, C050_3, C050_4, C050_5],
-    planImages: [C050_plan_1, C050_plan_2],
-    desc: 'Проект будинку з навісом і терасою. У будинку спроектовані гостинна, кухня, 3 спальні, 2 санвузли, гардеробна при вході, топкова, тераса.',
-    houseArea: '111',
-  },
-  {
-    name: 'С051',
-    mainImg: C051_1,
-    images: [C051_1, C051_2, C051_3, C051_4, C051_5],
-    planImages: [C051_plan_1, C051_plan_2],
-    desc: 'Проект будинку з гаражем на 2 авто. У будинку спроектовані гостинна з кухнею, кабінет, 3 спальні, 3 санвузли, гардеробна при вході, велика гардеробна в основній спальні, велика тераса на 2-му поверсі, топкова',
-    houseArea: '262',
-    garageArea: '47.86',
-  },
-  {
-    name: 'С052',
-    mainImg: C052_1,
-    images: [C052_1, C052_2, C052_3, C052_4, C052_5, C052_6],
-    planImages: [C052_plan_1],
-    desc: 'Проект одноповерхового будинку. У будинку спроектовані гостинна з кухнею, 3 спальні, санвузол, гардеробна, кладова біля кухні, тераса, топочная.',
-    houseArea: '100',
-    garageArea: '63.5',
-  },
-  // {
-  //   name: 'С053',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку в стилі шале. У будинку спроектовані гостинна з кухнею, 3 спальні, кабінет, 2 санвузли, гардеробна, тераса з верандою, лоджія, топочная.',
-  //   houseArea: '146',
-  // },
-  // {
-  //   name: 'С054',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку з гаражем та терасою. У будинку спроектовані гостинно з кухнею, 2 спальні, 2 санвузли, 2 гардеробні, топкова, гараж, тераса.',
-  //   houseArea: '124',
-  // },
-  // {
-  //   name: 'С055',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку з гаражем та терасою. У будинку спроектовані гостинно з кухнею, 2 спальні, 2 санвузли, 2 гардеробні, топкова, гараж, тераса.',
-  //   houseArea: '124',
-  // },
-  // {
-  //   name: 'С056',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку з гаражем та терасою. У будинку спроектовані гостинно з кухнею, 2 спальні, 2 санвузли, 2 гардеробні, топкова, гараж, тераса.',
-  //   houseArea: '124',
-  // },
-  // {
-  //   name: 'С057',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку з гаражем та терасою. У будинку спроектовані гостинно з кухнею, 2 спальні, 2 санвузли, 2 гардеробні, топкова, гараж, тераса.',
-  //   houseArea: '124',
-  // },
-  // {
-  //   name: 'С058',
-  //   mainImg: '',
-  //   images: [],
-  //   desc: 'Проект будинку з гаражем та терасою. У будинку спроектовані гостинно з кухнею, 2 спальні, 2 санвузли, 2 гардеробні, топкова, гараж, тераса.',
-  //   houseArea: '124',
-  // }
 ]
 
 export const Portfolio = () => {
@@ -804,10 +729,25 @@ export const Portfolio = () => {
   const [pageSize, setPageSize] = useState(12)
   const [currentProjects, setCurrentProjects] = useState([])
   const projectsWrap = useRef()
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    setCurrentProjects(projects.slice((pageNumber - 1) * pageSize, pageNumber * pageSize))
-  }, [pageNumber])
+    const currentPage = Number(searchParams.get('page') || sessionStorage.getItem('page'))
+    
+    if(currentPage) {
+      setSearchParams({page: currentPage})
+    } else {
+      setSearchParams({page: 1})
+    } 
+  }, [])
+  
+
+  useEffect(() => {
+    const currentPage = Number(searchParams.get('page'))
+    setPageNumber(currentPage)
+    sessionStorage.setItem('page', currentPage)
+    setCurrentProjects(projects.slice((currentPage - 1) * pageSize, currentPage * pageSize)) 
+  }, [searchParams.get('page')])
 
   const scrollToTop = () => {
     if (projectsWrap.current) {
@@ -815,20 +755,20 @@ export const Portfolio = () => {
     }
   }
 
-  const handleClick = (pageNumber) => {
-    setPageNumber(pageNumber)
+  const handleClick = (pageNumber) => { 
+    setSearchParams({page: pageNumber})
     scrollToTop()
   }
 
   const handleClickPrevPage = (e) => {
     e.preventDefault()
-    setPageNumber(pageNumber - 1)
+    setSearchParams({page: pageNumber - 1})
     scrollToTop()
   }
 
   const handleClickNextPage = (e) => {
     e.preventDefault()
-    setPageNumber(pageNumber + 1)
+    setSearchParams({page: pageNumber + 1})
     scrollToTop()
   }
 
