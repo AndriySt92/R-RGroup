@@ -21,6 +21,7 @@ export const Project = () => {
   useEffect(() => {
     const project = projects.filter((project) => project.name == name)
     setProject(project[0])
+    setOfferProjects(getRandomProjects(2))
   }, [name])
 
   const handleClick = (name) => {
@@ -65,16 +66,16 @@ export const Project = () => {
             <p className="project_left_desc">{project.desc}</p>
             <section className="project_left_photos">
               <Gallery
+                key={`${project.name}_facades`}
                 images={project.images}
-                group={`${project.name}`}
                 title="Фасади:"
                 imgHeight150
               />
             </section>
             <section className="project_left_plans">
               <Gallery
+                key={`${project.name}_plans`}
                 images={project.planImages}
-                group={`${project.name}`}
                 title="Плани:"
                 imgHeight150
               />
