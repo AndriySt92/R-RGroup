@@ -6,7 +6,7 @@ import { getRandomProjects } from '../../utils/getRandomProjects'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
 import { pojectDevSlide1, pojectDevSlide2 } from '../../assets'
 
-export const ProjectDevelopment = () => {
+const ProjectDevelopment = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
@@ -88,3 +88,5 @@ export const ProjectDevelopment = () => {
     </div>
   )
 }
+
+export default ProjectDevelopment

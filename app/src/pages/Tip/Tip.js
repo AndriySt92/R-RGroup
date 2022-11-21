@@ -8,7 +8,7 @@ import { Tip3 } from './Tip3'
 import { Tip4 } from './Tip4'
 import { Tip5 } from './Tip5'
 
-export const Tip = () => {
+const Tip = () => {
   const [title, setTitle] = useState('')
   const { urlTitle } = useParams()
   
@@ -34,3 +34,5 @@ export const Tip = () => {
     </div>
   )
 }
+
+export default Tip

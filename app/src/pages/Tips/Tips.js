@@ -41,7 +41,7 @@ const tips = [
   },
 ]
 
-export const Tips = () => {
+const Tips = () => {
   let navigate = useNavigate()
 
   const handleClick = (urlTitle) => {
@@ -87,3 +87,5 @@ export const Tips = () => {
     </div>
   )
 }
+
+export default Tips

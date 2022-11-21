@@ -2,7 +2,7 @@ import React from 'react'
 import './contacts.scss'
 import { contacts } from '../../assets'
 
-export const Contacts = () => {
+const Contacts = () => {
   return (
     <section className="contacts">
       <div className="container">
@@ -45,3 +45,5 @@ export const Contacts = () => {
     </section>
   )
 }
+
+export default Contacts

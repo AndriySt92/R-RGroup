@@ -196,7 +196,7 @@ const galleryImages = [
 const slideImages = [repairWorksSlide1, repairWorksSlide2]
 
 
-export const RepairWork = () => {
+const RepairWork = () => {
   return (
     <div className="repair_work">
       <div className="container">
@@ -234,3 +234,5 @@ export const RepairWork = () => {
     </div>
   )
 }
+
+export default RepairWork

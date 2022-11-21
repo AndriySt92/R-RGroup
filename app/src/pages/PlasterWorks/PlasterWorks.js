@@ -128,7 +128,7 @@ const galleryImages = [
 
 const slideImages = [plasterWorksSlide1, plasterWorksSlide2, plasterWorksSlide3]
 
-export const PlasterWorks = () => {
+const PlasterWorks = () => {
   return (
     <div className="plaster_work">
       <div className="container">
@@ -152,3 +152,5 @@ export const PlasterWorks = () => {
     </div>
   )
 }
+
+export default PlasterWorks

@@ -123,7 +123,7 @@ const galleryImages = [decPlaster1, decPlaster2, decPlaster3, decPlaster4, decPl
 const slideImages = [decPlasterSlide1, decPlasterSlide2, decPlasterSlide3, decPlasterSlide4]
 
 
-export const DecorativePlaster = () => {
+const DecorativePlaster = () => {
   return (
     <div className="decorative_plaster">
       <div className="container">
@@ -147,3 +147,5 @@ export const DecorativePlaster = () => {
     </div>
   )
 }
+
+export default DecorativePlaster

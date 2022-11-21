@@ -1,23 +1,26 @@
+import React from 'react'
 import './App.scss'
 import { Routes, Route } from 'react-router-dom'
-import { Contacts } from './pages/Contacts/Contacts'
 import { Home } from './pages/Home/Home'
-import { RepairWork } from './pages/RepairWork/RepairWork'
-import { Services } from './pages/Services/Services'
 import { Layout } from './components/Layout/Layout'
-import { FacadeWorks } from './pages/FacadeWorks/FacadeWorks'
-import { PlasterWorks } from './pages/PlasterWorks/PlasterWorks'
-import { RoofingWorks } from './pages/RoofingWorks/RoofingWorks'
-import { ProjectDevelopment } from './pages/ProjectDevelopment/ProjectDevelopment'
-import { ConcreteWorks } from './pages/ConcreteWorks/ConcreteWorks'
-import { PavingWorks } from './pages/PavingWorks/PavingWorks'
-import { DecorativePlaster } from './pages/DecorativePlaster/DecorativePlaster'
-import { Portfolio } from './pages/Portfolio/Portfolio'
-import { Tips } from './pages/Tips/Tips'
-import { Project } from './pages/Project/Project'
-import { Tip } from './pages/Tip/Tip'
 import { ScrollToTop } from './hoc/ScrollToTop/ScrollToTop'
 import { NotFound } from './pages/NotFound/NotFound'
+import { Loader } from './components/Loader/Loader'
+
+const RepairWork = React.lazy(() => import('./pages/RepairWork/RepairWork'))
+const FacadeWorks = React.lazy(() => import('./pages/FacadeWorks/FacadeWorks'))
+const PlasterWorks = React.lazy(() => import('./pages/PlasterWorks/PlasterWorks'))
+const RoofingWorks = React.lazy(() => import('./pages/RoofingWorks/RoofingWorks'))
+const ProjectDevelopment = React.lazy(() => import('./pages/ProjectDevelopment/ProjectDevelopment'))
+const ConcreteWorks = React.lazy(() => import('./pages/ConcreteWorks/ConcreteWorks'))
+const PavingWorks = React.lazy(() => import('./pages/PavingWorks/PavingWorks'))
+const DecorativePlaster = React.lazy(() => import('./pages/DecorativePlaster/DecorativePlaster'))
+const Portfolio = React.lazy(() => import('./pages/Portfolio/Portfolio'))
+const Project = React.lazy(() => import('./pages/Project/Project'))
+const Tips = React.lazy(() => import('./pages/Tips/Tips'))
+const Tip = React.lazy(() => import('./pages/Tip/Tip'))
+const Contacts = React.lazy(() => import('./pages/Contacts/Contacts'))
+const Services = React.lazy(() => import('./pages/Services/Services'))
 
 function App() {
   return (
@@ -26,21 +29,119 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="contacts" element={<Contacts />} />
-            <Route path="services" element={<Services />} />
-            <Route path="repairWorks" element={<RepairWork />} />
-            <Route path="facadeWorks" element={<FacadeWorks />} />
-            <Route path="plasterWorks" element={<PlasterWorks />} />
-            <Route path="roofingWorks" element={<RoofingWorks />} />
-            <Route path="projectDevelopment" element={<ProjectDevelopment />} />
-            <Route path="concreteWorks" element={<ConcreteWorks />} />
-            <Route path="pavingWorks" element={<PavingWorks />} />
-            <Route path="decorativePlaster" element={<DecorativePlaster />} />
-            <Route path="portfolio" element={<Portfolio />} />
-            <Route path="tips" element={<Tips />} />
-            <Route path="tip/:urlTitle" element={<Tip />} />
-            <Route path="project/:name" element={<Project />} />
-            <Route path='*' element={<NotFound />} />
+            <Route
+              path="contacts"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Contacts />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="services"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Services />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="repairWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <RepairWork />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="facadeWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <FacadeWorks />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="plasterWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <PlasterWorks />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="roofingWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <RoofingWorks />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="projectDevelopment"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <ProjectDevelopment />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="concreteWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <ConcreteWorks />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="pavingWorks"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <PavingWorks />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="decorativePlaster"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <DecorativePlaster />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="portfolio"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Portfolio />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="tips"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Tips />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="tip/:urlTitle"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Tip />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="project/:name"
+              element={
+                <React.Suspense fallback={<Loader />}>
+                  <Project />
+                </React.Suspense>
+              }
+            />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </ScrollToTop>

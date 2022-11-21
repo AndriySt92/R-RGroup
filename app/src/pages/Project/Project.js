@@ -8,7 +8,7 @@ import { Loader } from '../../components/Loader/Loader'
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import { Projects } from '../../components/Projects/Projects'
 
-export const Project = () => {
+const Project = () => {
   const [project, setProject] = useState({})
   const [offerProjects, setOfferProjects] = useState([])
   const navigate = useNavigate()
@@ -159,3 +159,5 @@ export const Project = () => {
     </div>
   )
 }
+
+export default Project

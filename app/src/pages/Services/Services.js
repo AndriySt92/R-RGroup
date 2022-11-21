@@ -23,7 +23,7 @@ const servicesItems = [
   { imgSrc: services6, title: 'Розробка проектів', linkTo: '/projectDevelopment' },
 ]
 
-export const Services = () => {
+const Services = () => {
   return (
     <div className="services mb-5">
       <div className="container">
@@ -62,3 +62,5 @@ export const Services = () => {
     </div>
   )
 }
+
+export default Services

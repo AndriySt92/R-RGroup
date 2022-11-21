@@ -838,7 +838,7 @@ export const projects = [
   },
 ]
 
-export const Portfolio = () => {
+const Portfolio = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const [pageSize, setPageSize] = useState(12)
   const [currentProjects, setCurrentProjects] = useState([])
@@ -956,3 +956,5 @@ export const Portfolio = () => {
     </div>
   )
 }
+
+export default Portfolio

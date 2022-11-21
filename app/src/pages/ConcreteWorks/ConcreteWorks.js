@@ -76,7 +76,7 @@ const galaryImages = [concrete1, concrete2, concrete3, concrete4, concrete5, con
 const slideImages = [services7, tip2_2]
 
 
-export const ConcreteWorks = () => {
+const ConcreteWorks = () => {
   return (
     <div className="concrete_works">
       <div className="container">
@@ -96,3 +96,5 @@ export const ConcreteWorks = () => {
     </div>
   )
 }
+
+export default ConcreteWorks

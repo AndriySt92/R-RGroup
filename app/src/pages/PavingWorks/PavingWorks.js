@@ -55,7 +55,7 @@ const pavingWorksGallery = [
   pavingWorks12,
 ]
 
-export const PavingWorks = () => {
+const PavingWorks = () => {
   return (
     <div className="paving_works">
       <div className="container">
@@ -211,3 +211,5 @@ export const PavingWorks = () => {
     </div>
   )
 }
+
+export default PavingWorks

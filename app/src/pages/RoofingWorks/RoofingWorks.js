@@ -92,7 +92,7 @@ const galleryImages = [
 const slideImages = [roofingWorksSlide1, roofingWorksSlide2, roofingWorksSlide3]
 
 
-export const RoofingWorks = () => {
+const RoofingWorks = () => {
   return (
     <div className="roofing_works">
       <div className="container">
@@ -116,3 +116,5 @@ export const RoofingWorks = () => {
     </div>
   )
 }
+
+export default RoofingWorks

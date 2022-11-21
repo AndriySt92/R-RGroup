@@ -144,7 +144,7 @@ const galleryImages = [
 const slideImages = [facadeWorksSlide1, facadeWorksSlide2, facadeWorksSlide3]
 
 
-export const FacadeWorks = () => {
+const FacadeWorks = () => {
   return (
     <div className="facade_work">
       <div className="container">
@@ -168,3 +168,5 @@ export const FacadeWorks = () => {
     </div>
   )
 }
+
+export default FacadeWorks
