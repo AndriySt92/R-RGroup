@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { lengthValidation, phoneValidation } from '../../utils/formValidation'
 import './form.scss'
 
-export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder }) => {
+export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder, setIsError, setIsSuccess }) => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' })
   const [isDirty, setIsDirty] = useState({ name: false, phone: false, message: false })
   const [formError, setFormError] = useState({ name: '', phone: '', message: '' })
@@ -65,12 +65,33 @@ export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder }) => 
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if(formData.phone.length === 0){
-      setFormError({...formError, phone: "Будь ласка, введіть Ваш номер телефону!"})
-    } else {
-      setFormData({name:'', phone:'', message: ''})
+    if (formData.phone.length === 0) {
+      setFormError({ ...formError, phone: 'Будь ласка, введіть Ваш номер телефону!' })
+      return
     }
-    
+
+    fetch('api/feedback', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === 'success') {
+          setIsSuccess(true)
+          setFormData({ name: '', phone: '', message: '' })
+          setTimeout(() => {
+            setIsSuccess(false)
+          }, 7000);
+        } else {
+          setIsError(true)
+          setTimeout(() => {
+            setIsError(false)
+          }, 7000);
+        }
+      })
   }
 
   return (
@@ -132,7 +153,7 @@ export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder }) => 
         onClick={handleSubmit}
         disabled={isFormError}
         type="submit"
-        className="btn btn-lg w-100"
+        className="btn btn-lg w-100 mb-3 mb-lg-4"
         id="inputGroup-sizing-lg">
         Відправити
       </button>

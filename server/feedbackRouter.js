@@ -7,12 +7,12 @@ let router = express.Router()
 
 router.post('/', async (req, res) => {
   try {
-    const { username, number, message } = req.body
-    
-    const name = username.toUpperCase() || 'не вказано'
+    const { name, phone, message } = req.body
+
+    const username = name.toUpperCase() || 'не вказано'
     const topic = message || 'не вказано'
 
-    const html = `Ім'я: <b>${name}</b><br>Телефон: <b>${number}</b><br>Тема: ${topic}`
+    const html = `Ім'я: <b>${username}</b><br>Телефон: <b>${phone}</b><br>Тема: <b>${topic}</b>`
 
     let mailDetails = {
       from: process.env.EMAIL_USER,
@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
 
     transport.sendMail(mailDetails, function (err, _) {
       if (err) {
-        res.status(400).json({ message: 'Виникла помилка. Будь ласка спробуйте ще раз!' })
+        res.status(400).json({ message: err })
       } else {
-        res.status(200).json({ message: 'Повідомлення відправлено успішно. Чекайте на наш дзвінок в найблищий час. Дякуєм!' })
+        res.status(200).json({ message: 'success' })
       }
     })
   } catch (err) {

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick'
+import { Alert } from '../Alert/Alert'
 import { Form } from '../Form/Form'
 import './topSliderSection.scss'
 
 export const TopSliderSection = ({ slideImages }) => {
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [isError, setIsError] = useState(false)
 
   const settings = {
     infinite: true,
@@ -33,7 +36,18 @@ export const TopSliderSection = ({ slideImages }) => {
           </div>
         </div>
         <div className="col-md-6 px-5">
-          <Form title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'} subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'} />
+          <Form
+            title={'ПО ТЕЛЕФОНУ ШВИДШЕ!'}
+            subtitle={'ОТРИМАЙТЕ КОНСУЛЬТАЦІЮ СПЕЦІАЛІСТА'}
+            setIsSuccess={setIsSuccess}
+            setIsError={setIsError}
+          />
+          {isError && (
+            <Alert type='error' />
+          )}
+          {isSuccess && (
+            <Alert type='success' />
+          )}
         </div>
       </div>
     </section>

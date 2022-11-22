@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './modal.scss'
 import { Form } from '../Form/Form'
+import { Alert } from '../Alert/Alert'
 
 export const Modal = () => {
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [isError, setIsError] = useState(false)
+
   return (
     <div
       className="modal fade"
@@ -26,7 +30,18 @@ export const Modal = () => {
               aria-label="Close"></button>
           </div>
           <div className="modal-body">
-            <Form withTextarea textareaPlaceholder="Що Вас цікавить?" />
+            {isError && (
+             <Alert type='error' />
+            )}
+            {isSuccess && (
+              <Alert type='success' />
+            )}
+            <Form
+              withTextarea
+              textareaPlaceholder="Що Вас цікавить?"
+              setIsSuccess={setIsSuccess}
+              setIsError={setIsError}
+            />
           </div>
         </div>
       </div>
