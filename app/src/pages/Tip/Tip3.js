@@ -1,12 +1,11 @@
 import React from 'react'
-import { tip3 } from '../../assets'
 
 export const Tip3 = () => {
   return (
     <>
       <h1 className="mb-5">Цегла чи піноблок?</h1>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tip3} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-3-min_fwmy7n.jpg" alt="" />
       </div>
       <p className="mb-3">
         Для будівництва будинків зазвичай використовують міцну довговічну цеглу або газосилікатні чи

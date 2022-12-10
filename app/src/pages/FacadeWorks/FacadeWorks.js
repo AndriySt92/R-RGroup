@@ -1,23 +1,4 @@
 import React from 'react'
-import {
-  facade1,
-  facade2,
-  facade3,
-  facade4,
-  facade5,
-  facade6,
-  facade7,
-  facade8,
-  facade9,
-  facade10,
-  facade11,
-  facade12,
-  facade13,
-  facade14,
-  facadeWorksSlide1,
-  facadeWorksSlide2,
-  facadeWorksSlide3,
-} from '../../assets'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
@@ -125,23 +106,25 @@ const faqData = [
 ]
 
 const galleryImages = [
-  facade1,
-  facade2,
-  facade3,
-  facade4,
-  facade5,
-  facade6,
-  facade7,
-  facade8,
-  facade9,
-  facade10,
-  facade11,
-  facade12,
-  facade13,
-  facade14,
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-1-min_olxfkt.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980460/RRGroup/images/facadeWorks/facade-2-min_siojtq.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980460/RRGroup/images/facadeWorks/facade-3-min_qw1clf.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980457/RRGroup/images/facadeWorks/facade-4-min_zpicw7.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980457/RRGroup/images/facadeWorks/facade-5-min_godzy4.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-6-min_oqahly.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980457/RRGroup/images/facadeWorks/facade-7-min_n1vu4c.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980457/RRGroup/images/facadeWorks/facade-8-min_pdcuhv.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-9-min_kev4te.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-10-min_u6dgaf.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-11-min_g2734y.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-12-min_m0n7it.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-13-min_pxi3ug.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980458/RRGroup/images/facadeWorks/facade-14-min_w6fqby.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-15-min_t2n6aw.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-16-min_nsvrau.jpg",
 ]
 
-const slideImages = [facadeWorksSlide1, facadeWorksSlide2, facadeWorksSlide3]
+const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-slide-2-min_esyhmi.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-slide-1-min_wft6ga.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980459/RRGroup/images/facadeWorks/facade-slide-3-min_dlynri.jpg"]
 
 
 const FacadeWorks = () => {

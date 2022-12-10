@@ -1,5 +1,4 @@
 import React from 'react'
-import { tip2_1, tip2_2, tipTitle2 } from '../../assets'
 
 export const Tip2 = () => {
   return (
@@ -29,7 +28,7 @@ export const Tip2 = () => {
         використовується пальовий фундамент тільки у крайніх випадках.
       </p>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tip2_1} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1670068922/RRGroup/images/tips/tip-2-1_bkai9n.webp" alt="" />
       </div>
       <h3 className="mb-3">Стрічковий фундамент</h3>
       <p className="mb-3">
@@ -45,7 +44,7 @@ export const Tip2 = () => {
         процес.
       </p>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tip2_2} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1670068922/RRGroup/images/tips/tip-2-2_ztorrc.webp" alt="" />
       </div>
       <h3 className="mb-3">Монолітна плита</h3>
       <p className="mb-3">
@@ -55,7 +54,7 @@ export const Tip2 = () => {
         фундамент обійдеться замовнику в рази дешевше, ніж стрічковий або пальовий.
       </p>
       <div className="img_wrap mb-3">
-        <img src={tipTitle2} alt="" />
+        <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-title-2-min_ippf2c.jpg" alt="" />
       </div>
       <p className="mb-5">
       Зведення фундаменту – це найголовніший етап будівництва. Від того наскільки якісно будуть виконані роботи залежить надійність всієї будівлі, тому слід довіряти тільки фахівцям з відповідним досвідом робіт. Спеціалісти будівельної компанії «R&RGroup» допоможуть розробити проект монолітного фундаменту з усіма відповідними розрахунками, і забезпечатьякіснейого зведення в мінімальні строки.

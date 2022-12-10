@@ -1,5 +1,4 @@
 import React from 'react'
-import { tip4, tipTitle4 } from '../../assets'
 
 export const Tip4 = () => {
   return (
@@ -10,7 +9,7 @@ export const Tip4 = () => {
         планування слід подбати, щоб він був затишним і комфортним для проживання.
       </p>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tip4} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-4-min_w89wor.jpg" alt="" />
       </div>
       <h3 className="mb-3">Важливі нюанси планування будівлі</h3>
       <p className="mb-3">
@@ -56,7 +55,7 @@ export const Tip4 = () => {
         система вентиляції, тощо.
       </p>
       <div className="img_wrap mb-3">
-        <img src={tipTitle4} alt="" />
+        <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-title-4-min_mppxbi.jpg" alt="" />
       </div>
       <p className="mb-5">
         Важливо детально обговорити свої плани з архітектором. Фахівці компанії «R&Rgroup» зможуть підібрати готовий проект чи створити новий, відповідно до ваших

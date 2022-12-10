@@ -1,12 +1,11 @@
 import React from 'react'
-import { tip5_1, tip5_2, tipTitle5 } from '../../assets'
 
 export const Tip5 = () => {
   return (
     <>
       <h1 className="mb-5">Будівництво заміського будинку – з чого почати</h1>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tipTitle5} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-title-5-min_b6jyyv.jpg" alt="" />
       </div>
       <p className="mb-3">
         Дехто віддає перевагу купівлі вже готових заміських будинків,вирішивши таким чином не
@@ -44,7 +43,7 @@ export const Tip5 = () => {
         вулиці і з’єднати з воротами зручною вимощеною стежкою.
       </p>
       <div className="img_wrap mb-3">
-        <img src={tip5_1} alt="" />
+        <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981179/RRGroup/images/tips/tip-5-1-min_lnxd31.jpg" alt="" />
       </div>
       <h3 className="mb-3">Вибір матеріалів і будівництво</h3>
       <p className="mb-3">
@@ -53,7 +52,7 @@ export const Tip5 = () => {
         утеплення. При чому не важливо, буде використовуватись кругляк чи брус.{' '}
       </p>
       <div className="img_wrap mb-3">
-        <img src={tip5_2} alt="" />
+        <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-5-2-min_gyjcfd.jpg" alt="" />
       </div>
       <p className="mb-3">
         Тому для будівництва краще вибрати камінь. Це може бути цегла чи піноблок. В першому випадку

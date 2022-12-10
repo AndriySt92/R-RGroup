@@ -1,5 +1,4 @@
 import React from 'react'
-import { tip1, tipTitle1 } from '../../assets'
 
 export const Tip1 = () => {
   return (
@@ -12,7 +11,7 @@ export const Tip1 = () => {
         проживання в Києві.
       </p>
       <div className="img_wrap mb-3">
-        <img className="img-fluid" src={tip1} alt="" />
+        <img className="img-fluid" src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-1-min_oxomed.jpg" alt="" />
       </div>
       <h3 className="mb-3">Товщина в 300 міліметрів – достатньо для життя, мало для економії</h3>
       <p className="mb-3">Вибір товщини залежить від кількох факторів:</p>
@@ -62,7 +61,7 @@ export const Tip1 = () => {
         максимально зменшити тепловтрати.
       </p>
       <div className="img_wrap mb-3">
-        <img src={tipTitle1} alt="" />
+        <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1669981180/RRGroup/images/tips/tip-title-1-min_uid6jt.jpg" alt="" />
       </div>
       <p className="mb-5">
         Компанія «R&Rgroup» займається проектуванням і будівництвом будинків з піноблоків і

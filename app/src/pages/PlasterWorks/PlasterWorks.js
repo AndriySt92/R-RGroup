@@ -1,17 +1,4 @@
 import React from 'react'
-import {
-  plaster1,
-  plaster2,
-  plaster3,
-  plaster4,
-  plaster5,
-  plaster6,
-  plaster7,
-  plaster8,
-  plasterWorksSlide1,
-  plasterWorksSlide2,
-  plasterWorksSlide3
-} from '../../assets'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
@@ -116,17 +103,17 @@ const faqData = [
 ]
 
 const galleryImages = [
-  plaster1,
-  plaster2,
-  plaster3,
-  plaster4,
-  plaster5,
-  plaster6,
-  plaster7,
-  plaster8,
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-1-min_di6kzs.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-2-min_ta95ig.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980712/RRGroup/images/plasterWorks/plaster-3-min_yhdm9b.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-4-min_nusnnz.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-5-min_egvnmf.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-6-min_mjfkbg.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-7-min_q01rtt.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-8-min_blktwl.jpg",
 ]
 
-const slideImages = [plasterWorksSlide1, plasterWorksSlide2, plasterWorksSlide3]
+const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-works-slider-3-min_sktpwm.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980713/RRGroup/images/plasterWorks/plaster-works-slider-1-min_vybpt6.jpg"]
 
 const PlasterWorks = () => {
   return (

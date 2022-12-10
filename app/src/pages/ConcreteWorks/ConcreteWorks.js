@@ -1,5 +1,4 @@
 import React from 'react'
-import { concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8, services7, tip2_2 } from '../../assets'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
@@ -71,9 +70,9 @@ const faqData = [
   }
 ]
 
-const galaryImages = [concrete1, concrete2, concrete3, concrete4, concrete5, concrete6, concrete7, concrete8]
+const galaryImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-1-min_qvuqa2.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-2-min_dpltih.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980206/RRGroup/images/concreteWorks/concrete-3-min_f59ves.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-4-min_l4vogu.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-5-min_exbmls.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-6-min_dqx4qb.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-7-min_gv4juu.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980205/RRGroup/images/concreteWorks/concrete-8-min_ftdazm.jpg"]
 
-const slideImages = [services7, tip2_2]
+const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669979975/RRGroup/images/concreteWorks/services-7-min_ygcqyy.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669979976/RRGroup/images/concreteWorks/tip-title-2-min_jhmumr.jpg"]
 
 
 const ConcreteWorks = () => {

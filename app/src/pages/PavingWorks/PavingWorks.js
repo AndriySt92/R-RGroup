@@ -1,58 +1,37 @@
 import React from 'react'
 import './pavingWorks.scss'
 import {
-  pavingWorksTop,
-  pavingWorksPricing,
   download,
-  catalogImg,
   eye,
-  popularOrders1,
-  popularOrders2,
-  popularOrders3,
-  popularOrders4,
-  popularOrders5,
-  popularOrders6,
   tools,
   estimate,
   phone,
-  pavingWorks1,
-  pavingWorks12,
-  pavingWorks11,
-  pavingWorks10,
-  pavingWorks9,
-  pavingWorks8,
-  pavingWorks7,
-  pavingWorks6,
-  pavingWorks5,
-  pavingWorks4,
-  pavingWorks3,
-  pavingWorks2,
 } from '../../assets'
 import { WorkStepsSection } from '../../components/WorkStepsSection/WorkStepsSection'
 import { Gallery } from '../../components/Gallery/Gallery'
 
 const popularOrdersItems = [
-  { title: 'Укладання Граніту "Колота Шашка"', img: popularOrders1 },
-  { title: 'Укладання ФЕМ "Старе місто"', img: popularOrders2 },
-  { title: 'Укладання ФЕМ "Креатив"', img: popularOrders3 },
-  { title: 'Укладання ФЕМ "Ромб"', img: popularOrders4 },
-  { title: 'Укладання ФЕМ "Паркет"', img: popularOrders5 },
-  { title: 'Укладання ФЕМ "Венеція"', img: popularOrders6 },
+  { title: 'Укладання Граніту "Колота Шашка"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/popular-orders-1-min_bgdeyf.jpg" },
+  { title: 'Укладання ФЕМ "Старе місто"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/popular-orders-2-min_ki6gfq.jpg" },
+  { title: 'Укладання ФЕМ "Креатив"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/popular-orders-3-min_ez1jv8.jpg" },
+  { title: 'Укладання ФЕМ "Ромб"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/popular-orders-4-min_jzpruh.jpg" },
+  { title: 'Укладання ФЕМ "Паркет"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/popular-orders-5-min_s8wd23.jpg" },
+  { title: 'Укладання ФЕМ "Венеція"', img: "https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/popular-orders-6-min_lqzgir.jpg" },
 ]
 
 const pavingWorksGallery = [
-  pavingWorks1,
-  pavingWorks2,
-  pavingWorks3,
-  pavingWorks4,
-  pavingWorks5,
-  pavingWorks6,
-  pavingWorks7,
-  pavingWorks8,
-  pavingWorks9,
-  pavingWorks10,
-  pavingWorks11,
-  pavingWorks12,
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-1-min_iidcil.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-2-min_jipwig.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-3-min_oryrq0.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-4-min_e3q4aa.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670065277/RRGroup/images/pavingWorks/paving-works-5_utvdb9.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064774/RRGroup/images/pavingWorks/paving-works-6-min_fdsig9.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-7-min_tm0qsd.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-8-min_euuani.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-9-min_cqm0te.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-10-min_cgxokh.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-11-min_vwmjtj.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-12-min_fcoxad.jpg",
 ]
 
 const PavingWorks = () => {
@@ -71,7 +50,7 @@ const PavingWorks = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="img_wrap">
-                  <img src={pavingWorksTop} alt="" className="img-fluid w-100" />
+                  <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-top-min_areuhh.jpg" alt="" className="img-fluid w-100" />
                 </div>
               </div>
               <div className="col-lg-6">
@@ -106,7 +85,7 @@ const PavingWorks = () => {
           <div className="row">
             <div className="col-md-6 pricing-left">
               <div className="mt-4">
-                <img src={pavingWorksPricing} alt="" />
+                <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670064771/RRGroup/images/pavingWorks/paving-works-pricing-min_hfcnz7.jpg" alt="" />
               </div>
               <a className="load_btn">
                 <img src={download} alt="" />
@@ -186,7 +165,7 @@ const PavingWorks = () => {
           <div className="row">
             <div className="col-md-6 catalog_left">
               <div>
-                <img src={catalogImg} alt="" />
+                <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/catalog-img-min_qzocfa.jpg" alt="" />
               </div>
             </div>
             <div className="col-md-6 catalog_right">

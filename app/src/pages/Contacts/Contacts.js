@@ -1,6 +1,5 @@
 import React from 'react'
 import './contacts.scss'
-import { contacts } from '../../assets'
 
 const Contacts = () => {
   return (
@@ -38,7 +37,7 @@ const Contacts = () => {
         <hr className="my-2" />
         <div className="row">
           <div className="col-12">
-            <img className="img-fluid my-4 my-sm-5" src={contacts} alt="" />
+            <img className="img-fluid my-4 my-sm-5" src="https://res.cloudinary.com/drcptrml4/image/upload/v1670069785/RRGroup/images/contacts-min_rygzxl.jpg" alt="" />
           </div>
         </div>
       </div>

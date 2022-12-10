@@ -1,20 +1,6 @@
 import React from 'react'
 import {
   materials,
-  repairImg1,
-  repairImg2,
-  repairImg3,
-  repairImg4,
-  repairImg5,
-  repairImg6,
-  repairImg7,
-  repairImg8,
-  repairImg9,
-  repairImg10,
-  repairImg11,
-  repairImg12,
-  repairWorksSlide1,
-  repairWorksSlide2,
 } from '../../assets'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
@@ -179,21 +165,21 @@ const faqData = [
 ]
 
 const galleryImages = [
-  repairImg1,
-  repairImg2,
-  repairImg3,
-  repairImg4,
-  repairImg5,
-  repairImg6,
-  repairImg7,
-  repairImg8,
-  repairImg9,
-  repairImg10,
-  repairImg11,
-  repairImg12,
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-img-1-min_duxhro.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-2-min_b3o1gj.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-3-min_t3vlbt.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-4-min_mmady8.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-5-min_kxddbi.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-6-min_qmfvll.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-7-min_p0gy6s.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980838/RRGroup/images/repairWorks/repair-img-8-min_q9ongj.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-img-9-min_x7ogrs.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-img-10-min_rfnqwu.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-img-11-min_ibzp2d.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-img-12-min_o7xdog.jpg",
 ]
 
-const slideImages = [repairWorksSlide1, repairWorksSlide2]
+const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-slide-1-min_sgskqp.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980839/RRGroup/images/repairWorks/repair-slide-2-min_o6lvq4.jpg"]
 
 
 const RepairWork = () => {
@@ -224,7 +210,7 @@ const RepairWork = () => {
             </div>
             <div className="row">
               <div className="col-sm-12">
-                <img src={materials} alt="" className="img-fluid w-100" />
+                <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670422609/RRGroup/images/repairWorks/materials-min_be2gf2.png" alt="" className="img-fluid w-100" />
               </div>
             </div>
           </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import './workOrderSection.scss'
-import {
-    workOrder,
-  } from '../../assets'
+
 
 export const WorkOrderSection = () => {
   return (
@@ -15,7 +13,7 @@ export const WorkOrderSection = () => {
         </div>
         <div className="row">
           <div className="col-sm-12">
-            <img src={workOrder} alt="" className="img-fluid w-100" />
+            <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670070879/RRGroup/images/work-order-min_jyuv3n.png" alt="" className="img-fluid w-100" />
           </div>
         </div>
       </div>

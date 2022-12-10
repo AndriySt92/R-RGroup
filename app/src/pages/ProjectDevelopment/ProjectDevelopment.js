@@ -4,7 +4,6 @@ import { Projects } from '../../components/Projects/Projects'
 import { Loader } from '../../components/Loader/Loader'
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import { TopSliderSection } from '../../components/TopSliderSection/TopSliderSection'
-import { pojectDevSlide1, pojectDevSlide2 } from '../../assets'
 
 const ProjectDevelopment = () => {
   const [projects, setProjects] = useState([])
@@ -22,7 +21,7 @@ const ProjectDevelopment = () => {
     return <Loader />
   }
 
-  const slideImages = [pojectDevSlide1, pojectDevSlide2]
+  const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980760/RRGroup/images/projectDev/project-dev-slide-1-min_jjayp2.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1668167143/RRGroup/images/projectDev/project-dev-slide-2_orgctg.webp"]
 
   return (
     <div className="project_development">

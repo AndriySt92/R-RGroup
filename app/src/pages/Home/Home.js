@@ -1,24 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './home.scss'
-import {
-  homeSlider1,
-  homeSlider2,
-  homeSlider3,
-  homeSlider4,
-  homeSlider5,
-  homeSlider6,
-  homeTopSlider1,
-  homeTopSlider2,
-  orderImg1,
-  orderImg2,
-  orderImg3,
-  workOrder1,
-  workOrder2,
-  workOrder3,
-  workOrder4,
-  workOrder5,
-  workOrder6,
-} from '../../assets'
 import { AutoplaySlider } from '../../components/AutoplaySlider/AutoplaySlider'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
@@ -78,14 +59,14 @@ const orderTypeData = {
     {
       title: 'Економне',
       subtitle: '«Коробка»',
-      imgSrc: orderImg1,
+      imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670589719/RRGroup/images/home/order-type-1-min_kyaivg.png",
       works: ['Фундамент', 'Стіни та перегородки', 'Покрівля', 'Віконні та дверні блоки'],
       isTrend: false,
     },
     {
       title: 'Топове',
       subtitle: '«Все під ключ»',
-      imgSrc: orderImg2,
+      imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/c_scale,w_670/v1670589720/RRGroup/images/home/order-type-2-min_ydbwrg.png",
       works: [
         'Фундамент',
         'Стіни та перегородки',
@@ -107,7 +88,7 @@ const orderTypeData = {
     {
       title: 'Базове',
       subtitle: '«Під чистову обробку»',
-      imgSrc: orderImg3,
+      imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670589719/RRGroup/images/home/order-type-3-min_yuuuin.png",
       works: [
         'Фундамент',
         'Стіни та перегородки',
@@ -124,15 +105,15 @@ const orderTypeData = {
 }
 
 const autoplaySliderData = [
-  { imgSrc: homeSlider1, title: 'Керамоблок 2НФ' },
-  { imgSrc: homeSlider2, title: 'Керамзітні блоки' },
-  { imgSrc: homeSlider3, title: 'Карказ' },
-  { imgSrc: homeSlider4, title: 'Цегла' },
-  { imgSrc: homeSlider5, title: 'Газоблок' },
-  { imgSrc: homeSlider6, title: 'Опалубка' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071827/RRGroup/images/home/home-autoplay-slider-1-min_t4mt3d.png", title: 'Керамоблок 2НФ' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071827/RRGroup/images/home/home-autoplay-slider-2-min_bh3fmf.png", title: 'Керамзітні блоки' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071828/RRGroup/images/home/home-autoplay-slider-3-min_r7oxe7.png", title: 'Карказ' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071828/RRGroup/images/home/home-autoplay-slider-4-min_oupvy7.png", title: 'Цегла' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071827/RRGroup/images/home/home-autoplay-slider-5-min_c5bhvu.png", title: 'Газоблок' },
+  { imgSrc: "https://res.cloudinary.com/drcptrml4/image/upload/v1670071827/RRGroup/images/home/home-autoplay-slider-6-min_bsdlta.png", title: 'Опалубка' },
 ]
 
-const workOrderImages = [workOrder1, workOrder2, workOrder3, workOrder4, workOrder5, workOrder6]
+const workOrderImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-1-min_mxb7j4.png", "https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-2-min_diomcu.png", "https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-3-min_coyevw.png", "https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-4-min_orgn1o.png", "https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-5-min_fthidw.png", "https://res.cloudinary.com/drcptrml4/image/upload/v1670421463/RRGroup/images/home/work-order-6-min_sxaozw.png"]
 
 export const Home = () => {
   const [projects, setProjects] = useState([])
@@ -157,16 +138,16 @@ export const Home = () => {
   if (!projects.length) {
     return <Loader />
   }
-  debugger
+
   return (
     <div className="home">
       <div className='top_autoplay_slider'>
         <Slider {...settings}>
           <div>
-            <img src={homeTopSlider1} className="d-block w-100" alt="..." />
+            <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420599/RRGroup/images/home/home-slider-1-min_ba9mwr.jpg" className="d-block w-100" alt="..." />
           </div>
           <div>
-            <img src={homeTopSlider2} className="d-block w-100" alt="..." />
+            <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420761/RRGroup/images/home/home-slider-2-min_xdccgy.jpg" className="d-block w-100" alt="..." />
           </div>
         </Slider>
       </div>

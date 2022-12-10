@@ -1,21 +1,4 @@
 import React from 'react'
-import {
-  roofing1,
-  roofing2,
-  roofing3,
-  roofing4,
-  roofing5,
-  roofing6,
-  roofing7,
-  roofing8,
-  roofing9,
-  roofing10,
-  roofing11,
-  roofing12,
-  roofingWorksSlide1,
-  roofingWorksSlide2,
-  roofingWorksSlide3,
-} from '../../assets'
 import { FaqSection } from '../../components/FaqSection/FaqSection'
 import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
 import { Gallery } from '../../components/Gallery/Gallery'
@@ -75,21 +58,21 @@ const faqData = [
 ]
 
 const galleryImages = [
-  roofing1,
-  roofing2,
-  roofing3,
-  roofing4,
-  roofing5,
-  roofing6,
-  roofing7,
-  roofing8,
-  roofing9,
-  roofing10,
-  roofing11,
-  roofing12,
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-1-min_dgsgfb.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-2-min_c48jmm.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980952/RRGroup/images/roofingWorks/roofing-3-min_juxx6i.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980950/RRGroup/images/roofingWorks/roofing-4-min_efngfw.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-5-min_tefvx1.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980950/RRGroup/images/roofingWorks/roofing-6-min_ihjkqa.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980950/RRGroup/images/roofingWorks/roofing-7-min_axvcgr.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980950/RRGroup/images/roofingWorks/roofing-8-min_uweg8e.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980950/RRGroup/images/roofingWorks/roofing-9-min_digfyy.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-10-min_lohiib.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-11-min_mmrqzt.jpg",
+  "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-12-min_bmqofo.jpg",
 ]
 
-const slideImages = [roofingWorksSlide1, roofingWorksSlide2, roofingWorksSlide3]
+const slideImages = ["https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-works-slide-2-min_e7jx01.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-works-slide-3-min_sdzuxu.jpg", "https://res.cloudinary.com/drcptrml4/image/upload/v1669980951/RRGroup/images/roofingWorks/roofing-works-slide-1-min_bynmyr.jpg"]
 
 
 const RoofingWorks = () => {
