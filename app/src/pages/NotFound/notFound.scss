@@ -1,14 +1,17 @@
 .not_found{
-    height: 55vh;
-    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    min-height: 55vh;
+    height: fit-content;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden;
     h1{
         font-size: 100px !important;
         color: var(--color-yellow);
         margin-bottom: 30px;
     }
     h2{
+        margin-top: 15px;
         color: var(--color-blue);
         font-size: 50px !important;
         margin-bottom: 30px;
@@ -16,23 +19,24 @@
     span{
         font-size: 22px;
         line-height: 46px;
-        color: var(--color-blue);
+        color: var(--color-blue);   
         button{
             border: none;
             outline: none;
-            background-color: var(--color-blue);
-            color: #fff;
-            font-size: 18px;
-            padding: 5px 20px;
+            background-color: none;
+            color: #0d6efd;
+            font-size: inherit;
+            vertical-align: baseline;
+            text-decoration: underline;
+            padding: 0px;
+            cursor: pointer;
             a{
-                color: #fff;
-            }
-            &:hover{
-                color: #fff;
-                background-color: var(--color-blue-hover);
+                font-size: inherit;
             }
             &:focus{
                 outline: none;
+                border: none;
+                box-shadow: none;
             }
         }
     }

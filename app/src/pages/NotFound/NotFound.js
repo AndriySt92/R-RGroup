@@ -16,7 +16,7 @@ export const NotFound = () => {
           <div className="col-12">
             <h2>Cторінку не знайдено</h2>
             <h1>404</h1>
-            <span>Ви можете повернутися <button className='btn' onClick={goBack}>Назад</button> або прейти на головну сторінку <button className='btn'><Link to='/'>Головна</Link></button></span>
+            <span>Ви можете повернутися <button className='btn' onClick={goBack}>назад</button> або прейти на <button className='btn'><Link to='/'>головну</Link></button> сторінку </span>
           </div>
         </div>
       </div>

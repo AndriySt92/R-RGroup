@@ -155,7 +155,7 @@ export const Home = () => {
         <div className="page_title home_title">
           <div className="row">
             <div className="col-12 order_type">
-              <h2>Будівництво під ключ</h2>
+              <h2 className='mb-2 mb-md-3'>Будівництво під ключ</h2>
               <p className="lead">Будуємо будинки і навіть більше.</p>
             </div>
           </div>

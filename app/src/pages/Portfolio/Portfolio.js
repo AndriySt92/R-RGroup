@@ -119,7 +119,7 @@ export const projects = [
       'https://res.cloudinary.com/drcptrml4/image/upload/v1668167248/RRGroup/images/projects/C007/C007-2_stdpcj.jpg',
       'https://res.cloudinary.com/drcptrml4/image/upload/v1668167246/RRGroup/images/projects/C007/C007-3_qteqjo.jpg',
       'https://res.cloudinary.com/drcptrml4/image/upload/v1668167258/RRGroup/images/projects/C007/C007-4_zdim20.jpg',
-      'https://res.cloudinary.com/drcptrml4/image/upload/v1668167258/RRGroup/images/projects/C007/C007-5_rr1dho.',
+      'https://res.cloudinary.com/drcptrml4/image/upload/v1668167258/RRGroup/images/projects/C007/C007-5_rr1dho.jpg',
     ],
     planImages: [
       'https://res.cloudinary.com/drcptrml4/image/upload/v1668167257/RRGroup/images/projects/C007/C007-plan-1_uddtua.jpg',

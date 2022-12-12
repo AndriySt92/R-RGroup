@@ -5,7 +5,7 @@ export const OrderTypeSection = ({ title, content }) => {
   return (
     <section className="orderType">
       <div className="row">
-        <div className="col-12 text-md-start text-lg-center">
+        <div className="col-12 text-start text-md-center">
           <h3>{title}</h3>
         </div>
       </div>
