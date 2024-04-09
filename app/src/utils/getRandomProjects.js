@@ -1,4 +1,4 @@
-import {projects} from '../pages/Portfolio/Portfolio'
+import {projects} from '../contants/portfolio'
 
 export const getRandomProjects = (n) => {
     const shuffled = [...projects].sort(() => 0.5 - Math.random());
