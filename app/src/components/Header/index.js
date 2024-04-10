@@ -1,7 +1,8 @@
 import React from 'react'
-import { Menu } from '../Menu/Menu'
-import { Modal } from '../Modal/Modal'
-import './header.scss'
+import { Menu, Modal } from '../'
+import './style.scss'
+
+
 
 export const Header = () => {
   return (
@@ -14,8 +15,12 @@ export const Header = () => {
                 <p>Будівельні послуги, будинки під ключ</p>
               </div>
               <div className="col-sm-12 col-md-6 text-md-end text-center">
-                <a  className='me-3 me-md-4' href='tel:+380961121126' target='_parent'>+38 (096) 112 112 6</a>
-                <a href='tel:+380671121126' target='_parent'>+38 (067) 112 112 6</a>
+                <a className="me-3 me-md-4" href="tel:+380961121126" target="_parent">
+                  +38 (096) 112 112 6
+                </a>
+                <a href="tel:+380671121126" target="_parent">
+                  +38 (067) 112 112 6
+                </a>
               </div>
             </div>
           </div>

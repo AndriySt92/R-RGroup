@@ -1,14 +1,11 @@
 import { React } from 'react'
-import './orderTypeSection.scss'
+import './style.scss'
+import { Title } from '../'
 
-export const OrderTypeSection = ({ title, content }) => {
+export const OrderType = ({ title, content }) => {
   return (
     <section className="orderType">
-      <div className="row">
-        <div className="col-12 text-start text-md-center">
-          <h3>{title}</h3>
-        </div>
-      </div>
+      <Title classes='text-center' title={title} />
       <div className="row">
         {content.map((order, index) => {
           return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import './loader.scss'
+import './style.scss'
 
 export const Loader = () => {
   return (

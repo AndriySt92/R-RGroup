@@ -1,18 +1,13 @@
 import React from 'react'
-import './gallery.scss'
+import './style.scss'
 import { LightgalleryProvider, LightgalleryItem } from 'react-lightgallery'
-
-
+import { Title } from '../'
 
 export const Gallery = ({ images, title, imgHeight150}) => {
 
   return (
     <section className="gallery">
-      <div className="row">
-        <div className="col-12">
-          <h3>{title ? title : 'Фото робіт:'}</h3>
-        </div>
-      </div>
+      <Title title={`${title ? title : 'Фото робіт:'}`} />
       <div className="row">
         <LightgalleryProvider>
           {images.map((image, index) => {

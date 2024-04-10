@@ -1,18 +1,10 @@
 import React, { useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import './menu.scss'
+import './style.scss'
 import { logo, phoneGif } from '../../assets'
+import { servicesItems } from '../../contants/menu'
 
-const servicesItems = [
-  { title: 'Ремонтні роботи', linkTo: '/repairWorks' },
-  { title: 'Штукатурні роботи', linkTo: '/plasterWorks' },
-  { title: 'Фасадні роботи', linkTo: '/facadeWorks' },
-  { title: 'Монолітні роботи', linkTo: '/concreteWorks' },
-  { title: 'Декоративна штукатурка', linkTo: '/decorativePlaster' },
-  { title: 'Покрівельні роботи', linkTo: '/roofingWorks' },
-  { title: 'Укладання бруківки', linkTo: '/pavingWorks' },
-  { title: 'Розробка проектів', linkTo: '/projectDevelopment' },
-]
+
 
 export const Menu = () => {
 
@@ -23,7 +15,7 @@ export const Menu = () => {
       hamburgerButton.current.click()
     }
   }
-
+  
   return (
     <div className="menu">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0">

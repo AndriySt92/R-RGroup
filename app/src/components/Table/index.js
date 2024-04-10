@@ -1,5 +1,5 @@
 import React from 'react'
-import './table.scss'
+import './style.scss'
 
 export const Table = ({ list }) => {
  

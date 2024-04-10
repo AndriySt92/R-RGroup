@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import './style.scss'
 import Slider from 'react-slick'
-import { Alert } from '../Alert/Alert'
-import { Form } from '../Form/Form'
-import './topSliderSection.scss'
+import { Alert, Form } from '../'
 
-export const TopSliderSection = ({ slideImages }) => {
+
+export const TopSlider = ({ slideImages }) => {
   const [isSuccess, setIsSuccess] = useState(false)
   const [isError, setIsError] = useState(false)
 
@@ -42,12 +42,8 @@ export const TopSliderSection = ({ slideImages }) => {
             setIsSuccess={setIsSuccess}
             setIsError={setIsError}
           />
-          {isError && (
-            <Alert type='error' />
-          )}
-          {isSuccess && (
-            <Alert type='success' />
-          )}
+          {isError && <Alert type="error" />}
+          {isSuccess && <Alert type="success" />}
         </div>
       </div>
     </section>

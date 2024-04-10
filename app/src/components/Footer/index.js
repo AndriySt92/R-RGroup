@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.scss'
+import './style.scss'
 import { Link } from 'react-router-dom'
 
 export const Footer = () => {
@@ -11,7 +11,14 @@ export const Footer = () => {
             <div className="col-12 text-center">
               <h2>Зв'язатися з менеджером</h2>
               <h4>
-                Телефонуйте за номером телефону <a className='footer_number' href='tel:+380961121126' target='_parent'>+38 (096) 112 112 6</a> або <a className='footer_number' href='tel:+380671121126' target='_parent'>+38 (067) 112 112 6</a>{' '}
+                Телефонуйте за номером телефону{' '}
+                <a className="footer_number" href="tel:+380961121126" target="_parent">
+                  +38 (096) 112 112 6
+                </a>{' '}
+                або{' '}
+                <a className="footer_number" href="tel:+380671121126" target="_parent">
+                  +38 (067) 112 112 6
+                </a>{' '}
               </h4>
               <h2>
                 Приймаємо дзвінки <b>з 9:00 до 17:00</b>
@@ -29,24 +36,18 @@ export const Footer = () => {
               </div>
               <div className="col-lg-9 mb-2 mb-xl-4 d-flex justify-content-md-center justify-content-lg-end">
                 <ul className="nav footer_nav">
-                  <li>
-                    <Link to="/">Будинки під ключ</Link>
-                  </li>
-                  <li>
-                    <Link to="/services">Будівельні послуги</Link>
-                  </li>
-                  <li>
-                    <Link to="/price">Ціни</Link>
-                  </li>
-                  <li>
-                    <Link to="/portfolio">Портфоліо</Link>
-                  </li>
-                  <li>
-                    <Link to="/contacts">Контакти</Link>
-                  </li>
-                  <li>
-                    <Link to="/tips">Поради</Link>
-                  </li>
+                  {[
+                    { to: '/', name: 'Будинки під ключ' },
+                    { to: '/services', name: 'Будівельні послуги' },
+                    { to: '/price', name: 'Ціни послуги' },
+                    { to: '/portfolio', name: 'Портфоліо' },
+                    { to: '/contacts', name: 'Контакти' },
+                    { to: '/tips', name: 'Поради' },
+                  ].map(({ to, name }) => (
+                    <li key={name}>
+                      <Link to={to}>{name}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

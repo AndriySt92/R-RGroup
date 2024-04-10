@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { lengthValidation, phoneValidation } from '../../utils/formValidation'
-import './form.scss'
+import './style.scss'
 
 export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder, setIsError, setIsSuccess }) => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' })

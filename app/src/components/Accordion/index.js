@@ -1,18 +1,15 @@
 import React from 'react'
-import './faqSection.scss'
+import './style.scss'
+import { Title } from '../Title'
 
-export const FaqSection = ({ faqData }) => {
+export const Accordion = ({ accordionData }) => {
   return (
-    <section className="accordion_faq">
-      <div className="row">
-        <div className="col-12">
-          <h3>Відповіді на популярні питання від клієнтів:</h3>
-        </div>
-      </div>
+    <section className="accordion">
+      <Title classes='text-left' title='Відповіді на популярні питання від клієнтів:' />
       <div className="row">
         <div className="col-12">
           <div className="accordion" id="accordionExample">
-            {faqData.map(({ id, question, answer }) => {
+            {accordionData.map(({ id, question, answer }) => {
               return (
                 <div className="accordion-item" key={id}>
                   <h2 className="accordion-header" id={`heading${id}`}>

@@ -1,0 +1,48 @@
+.title {
+    margin-bottom: 30px;
+}
+
+.page_title {
+    color: #333;
+    text-align: left;
+    margin-top: 100px !important;
+    h3{
+        line-height: 38px !important;
+        padding-left: 15px;
+        font-size: 28px !important;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--color-yellow);
+            transition: width 5s ease-in;
+        }
+    }
+}
+
+.home_title {
+    margin-top: 50px;
+}
+
+// @media screen and (max-width: 1199px) {
+//     .page_title {
+//         margin-top: 40px !important;
+//     }
+//   }
+
+// @media screen and (max-width: 991px) {
+//     .page_title {
+//         margin-top: 30px !important;
+//     }
+//   }
+
+// @media screen and (max-width: 575px) {
+//     .page_title {
+//         margin-top: 20px !important;
+//     }
+//   }
