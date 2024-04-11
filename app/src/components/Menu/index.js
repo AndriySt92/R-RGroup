@@ -1,13 +1,10 @@
 import React, { useRef } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import './style.scss'
+import { Link, NavLink } from 'react-router-dom'
 import { logo, phoneGif } from '../../assets'
-import { servicesItems } from '../../contants/menu'
-
-
+import { menuItems } from '../../contants/menu'
 
 export const Menu = () => {
-
   const hamburgerButton = useRef()
 
   const handleClick = () => {
@@ -15,7 +12,7 @@ export const Menu = () => {
       hamburgerButton.current.click()
     }
   }
-  
+
   return (
     <div className="menu">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0">
@@ -23,10 +20,13 @@ export const Menu = () => {
           <NavLink to="/" className="navbar-brand">
             <img src={logo} alt="" />
           </NavLink>
-          <div className="callback_button d-block d-lg-none" data-bs-target="#exampleModal" data-bs-toggle="modal">
-              <img src={phoneGif} alt="" />
-              <span>Замовити дзвінок</span>
-            </div>
+          <div
+            className="callback_button d-block d-lg-none"
+            data-bs-target="#exampleModal"
+            data-bs-toggle="modal">
+            <img src={phoneGif} alt="" />
+            <span>Замовити дзвінок</span>
+          </div>
           <button
             ref={hamburgerButton}
             className="navbar-toggler"
@@ -40,45 +40,31 @@ export const Menu = () => {
           </button>
           <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link" aria-current="page" onClick={handleClick}>
-                  Будинки під ключ
-                </NavLink>
-              </li>
-              <li className="nav-item services_item">
-                <NavLink to="/services" className="nav-link dropdown-toggle" onClick={handleClick}>
-                  Ремонтні роботи
-                </NavLink>
-                <ul className="dropdown_menu">
-                  {servicesItems.map(({linkTo, title}, index) => (
-                    <li key={title} className={`dropdown_item dropdown_item_${index+1}`}>
-                      <Link to={linkTo}>{title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/price" className="nav-link" onClick={handleClick}>
-                  Ціни 
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/portfolio" className="nav-link" onClick={handleClick}>
-                  Портфоліо
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/tips" className="nav-link" onClick={handleClick}>
-                  Поради
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/contacts" className="nav-link" onClick={handleClick}>
-                  Контакти
-                </NavLink>
-              </li>
+              {menuItems.map(({ linkTo, title, servicesItems }) => (
+                <li key={title} className={`${servicesItems ? 'services_item' : ''} nav-item`}>
+                  <NavLink
+                    to={linkTo}
+                    className={`${servicesItems ? 'dropdown-toggle' : ''} nav-link`}
+                    aria-current="page"
+                    onClick={handleClick}>
+                    {title}
+                  </NavLink>
+                  {servicesItems && (
+                    <ul className="dropdown_menu">
+                      {servicesItems.map(({ linkTo, title }, index) => (
+                        <li key={title} className={`dropdown_item dropdown_item_${index + 1}`}>
+                          <Link to={linkTo}>{title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
-            <div className="callback_button ms-auto d-lg-block d-none" data-bs-target="#exampleModal" data-bs-toggle="modal">
+            <div
+              className="callback_button ms-auto d-lg-block d-none"
+              data-bs-target="#exampleModal"
+              data-bs-toggle="modal">
               <img src={phoneGif} alt="" />
               <span>Замовити дзвінок</span>
             </div>
