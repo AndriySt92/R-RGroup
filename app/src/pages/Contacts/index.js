@@ -1,21 +1,17 @@
 import React from 'react'
-import './contacts.scss'
+import './style.scss'
+import { Title } from '../../components'
+import { facebook } from '../../assets'
 
 const Contacts = () => {
   return (
     <section className="contacts">
       <div className="container">
-        <div className="page_title">
-          <div className="row">
-            <div className="col-12">
-              <h2>Зв'язатися з Нами</h2>
-            </div>
-          </div>
-        </div>
+        <Title classes="page_title" title="Зв'язатися з Нами" />
         <hr className="mt-5" />
         <div className="row">
           <div className="col-lg-6 my-4">
-            <h3>Контакти:</h3>
+            <h3 className="mb-4">Контакти:</h3>
             <p>
               <b>+380 (096) 112-112-6</b>
             </p>
@@ -23,6 +19,18 @@ const Contacts = () => {
               <b>+380 (067) 112-112-6</b>
             </p>
             <p>Офіс: м.Городенка вулиця Івана Богуна 4a</p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/roman.zalishchuk"
+              aria-label="Facebook">
+              <img
+                src={facebook}
+                aria-hidden="true"
+                height={'30px'}
+                width={'30px'}
+                title="Facebook"
+              />
+            </a>
           </div>
           <div className="col-lg-6 ">
             <div className="contacts_map mt-2">
@@ -37,7 +45,11 @@ const Contacts = () => {
         <hr className="my-2" />
         <div className="row">
           <div className="col-12">
-            <img className="img-fluid my-4 my-sm-5" src="https://res.cloudinary.com/drcptrml4/image/upload/v1670069785/RRGroup/images/contacts-min_rygzxl.jpg" alt="" />
+            <img
+              className="img-fluid my-4 my-sm-5"
+              src="https://res.cloudinary.com/drcptrml4/image/upload/v1670069785/RRGroup/images/contacts-min_rygzxl.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>

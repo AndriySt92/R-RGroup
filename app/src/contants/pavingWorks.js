@@ -1,3 +1,5 @@
+import { estimate, phone, tools } from '../assets'
+
 export const popularOrdersItems = [
   {
     title: 'Укладання Граніту "Колота Шашка"',
@@ -38,4 +40,26 @@ export const pavingWorksGallery = [
   'https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-10-min_cgxokh.jpg',
   'https://res.cloudinary.com/drcptrml4/image/upload/v1670064772/RRGroup/images/pavingWorks/paving-works-11-min_vwmjtj.jpg',
   'https://res.cloudinary.com/drcptrml4/image/upload/v1670064773/RRGroup/images/pavingWorks/paving-works-12-min_fcoxad.jpg',
+]
+
+export const complexWorksItems = [
+  'Замовити комплекс робіт',
+  'Підготовка основи',
+  'Виставлення бордюрів',
+  'Укладання плитки',
+]
+
+export const freeWorksItems = [
+  { imgSrc: tools, title: 'Виїзд спеціаліста на об’єкт для замірів' },
+  { imgSrc: estimate, title: 'Складання кошторису на роботу та матеріали' },
+  { imgSrc: phone, title: 'Консультація з підбору плитки та матеріалів' },
+]
+
+export const garanteeItems = [
+  'Швидкий розрахунок за вашим ескізом',
+  'Безкоштовну адаптацію проєкту на підставі замірів',
+  'Оплату за фактом виконаної роботи, поетапно',
+  'Високу кваліфікацію і культуру виконання робіт',
+  'Ми робимо роботу під ключ на 100%',
+  'В нас краща ціна на ринку регіону',
 ]

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import './home.scss'
-import { AutoplaySlider } from '../../components/AutoplaySlider/AutoplaySlider'
-import { FaqSection } from '../../components/FaqSection/FaqSection'
-import { OrderTypeSection } from '../../components/OrderTypeSection/OrderTypeSection'
+import './style.scss'
+import { AutoplaySlider, Accordion, OrderType, Loader, Projects, Title } from '../../components'
 import { getRandomProjects } from '../../utils/getRandomProjects'
-import { Loader } from '../../components/Loader/Loader'
-import { Projects } from '../../components/Projects/Projects'
 import Slider from 'react-slick'
-import { accordionData, autoplaySliderData, orderTypeData, workOrderImages, settingsSlider as settings } from '../../contants/home'
+import {
+  accordionData,
+  autoplaySliderData,
+  orderTypeData,
+  workOrderImages,
+  settingsSlider as settings,
+} from '../../contants/home'
 
-export const Home = () => {
+const Home = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
@@ -22,26 +24,31 @@ export const Home = () => {
 
   return (
     <div className="home">
-      <div className='top_autoplay_slider'>
+      <div className="top_autoplay_slider">
         <Slider {...settings}>
           <div>
-            <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420599/RRGroup/images/home/home-slider-1-min_ba9mwr.jpg" className="d-block w-100" alt="..." />
+            <img
+              src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420599/RRGroup/images/home/home-slider-1-min_ba9mwr.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
           <div>
-            <img src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420761/RRGroup/images/home/home-slider-2-min_xdccgy.jpg" className="d-block w-100" alt="..." />
+            <img
+              src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420761/RRGroup/images/home/home-slider-2-min_xdccgy.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
           </div>
         </Slider>
       </div>
       <div className="container">
-        <div className="page_title home_title">
-          <div className="row">
-            <div className="col-12 order_type">
-              <h2 className='mb-2 mb-md-3'>Будівництво під ключ</h2>
-              <p className="lead">Будуємо будинки і навіть більше.</p>
-            </div>
-          </div>
-        </div>
-        <OrderTypeSection title={orderTypeData.mainTitle} content={orderTypeData.ordersTypeList} />
+        <Title
+          classes="page_title home_title"
+          title="Будівництво під ключ"
+          subtitle="Будуємо будинки та навіть більше."
+        />
+        <OrderType title={orderTypeData.mainTitle} content={orderTypeData.ordersTypeList} />
         <Projects
           title="Оберіть проект будинку"
           subtitle="Безкоштовно під ключ"
@@ -49,11 +56,11 @@ export const Home = () => {
           withButton
         />
         <AutoplaySlider autoplaySliderData={autoplaySliderData} />
-        <FaqSection faqData={accordionData} />
+        <Accordion accordionData={accordionData} />
         <section className="work_order">
           <div className="row">
             <div className="col-12  work_order_title">
-              <h3>Як ми працюємо:</h3>
+              <h3 className="mb-4">Як ми працюємо:</h3>
               <p className="mb-5">
                 Щоб скористатися послугами компанії <b>«R&Rgroup»</b>, вам необхідно зв'язатися з
                 нами за номером <b>+380 (96) 112-112-6</b> або <b>+380 (67) 112-112-6</b>. Ми
@@ -78,3 +85,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home

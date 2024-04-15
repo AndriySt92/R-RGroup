@@ -1,7 +1,8 @@
 import React from 'react'
-import './tips.scss'
+import './style.scss'
 import { useNavigate } from 'react-router-dom'
 import { tips } from '../../contants/tips'
+import { Title } from '../../components'
 
 const Tips = () => {
   let navigate = useNavigate()
@@ -9,16 +10,11 @@ const Tips = () => {
   const handleClick = (urlTitle) => {
     navigate(`/tip/${urlTitle}`)
   }
+
   return (
     <div className="tips">
       <div className="container">
-        <div className="page_title tips_title">
-          <div className="row">
-            <div className="col-12">
-              <h2>Поради по будівництву</h2>
-            </div>
-          </div>
-        </div>
+        <Title classes="page_title" title="Поради по будівництву" />
         <section className="tips">
           <div className="row">
             <div className="col-12 tips_items">

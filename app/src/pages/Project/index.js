@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './project.scss'
-import { Gallery } from '../../components/Gallery/Gallery'
-import { ProjectItem } from '../../components/ProjectItem/ProjectItem'
+import './style.scss'
+import { Gallery, Projects, ProjectItem, Loader, Title, ProjectPlan, Button } from '../../components'
 import { useNavigate, useParams } from 'react-router-dom'
 import { projects } from '../../contants/portfolio'
-import { Loader } from '../../components/Loader/Loader'
 import { getRandomProjects } from '../../utils/getRandomProjects'
-import { Projects } from '../../components/Projects/Projects'
+import { planItems } from '../../contants/projectDevelopment'
 
 const Project = () => {
   const [project, setProject] = useState({})
@@ -15,7 +13,7 @@ const Project = () => {
   const { name } = useParams()
 
   useEffect(() => {
-      setOfferProjects(getRandomProjects(2))
+    setOfferProjects(getRandomProjects(2))
   }, [])
 
   useEffect(() => {
@@ -35,13 +33,7 @@ const Project = () => {
   return (
     <div className="project">
       <div className="container">
-        <div className="page_title project_title">
-          <div className="row">
-            <div className="col-12">
-              <h2>Проект будинку {project.name}</h2>
-            </div>
-          </div>
-        </div>
+        <Title classes="page_title" title={`Проект будинку ${project.name}`} />
         <div className="row">
           <div className="project_left col-xl-9 col-lg-12">
             <div className="project_left_img mb-3">
@@ -80,57 +72,29 @@ const Project = () => {
                 imgHeight150
               />
             </section>
-            <section className="project_structure">
-              <div className="row">
-                <div className="col-12">
-                  <h3>У ціну проету входить:</h3>
-                  <ul className="ml-4">
-                    {[
-                      'генеральний план (розробляється індивідуально під ваш ділянку, входить увартість проекту);',
-                      'плани поверхів;',
-                      'фасади;',
-                      'розрізи;',
-                      'візуалізація;',
-                      'план покрівлі, розкладка і візуалізація крокiв;',
-                      'план фундаментів, їх армування, розрізи;',
-                      'готові плани поверхів;',
-                      'план перекриття (плити, балки, моноліт);',
-                      'підрахунок основних матеріалів і робіт.',
-                    ].map((item) => (
-                      <li key={item}>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </section>
+            <ProjectPlan title="У ціну проету входить:" planItems={planItems} />
           </div>
           <div className="project_right col-xl-3 col-lg-12">
             <div className="project_right_img d-none d-xl-block">
               <img className="img-fluid" src={project.mainImg} alt="" />
             </div>
             <div className="project_right_info d-none d-xl-block">
-              <div className="mt-2">
+              <div className="mt-2 mb-2">
                 <span>Площа: </span>
                 <b>
                   {project.houseArea}м<sup>2</sup>
                 </b>
               </div>
-              <div className="mb-2 mt-2">
-                <span>
-                  Ціна проекту: <b>124 тис. грн.</b>
-                </span>
-              </div>
-              <button
-                className="right_info_btn btn btn-primary"
-                data-bs-target="#exampleModal"
-                data-bs-toggle="modal">
-                Замовити проект
-              </button>
+              <Button
+                    classes="h5"
+                    content="Замовити проект"
+                    dataTarget="#exampleModal"
+                    dataToggle="modal"
+                    fullWidth
+                  />
             </div>
             <div className="project_right_offer mt-5 d-none d-xl-block">
-              <h5 className='mb-2'>Інші проекти:</h5>
+              <h5 className="mb-2">Інші проекти:</h5>
               <div className="row">
                 <ProjectItem
                   houseArea={offerProjects[0].houseArea}

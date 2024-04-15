@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import './portfolio.scss'
-import { Projects } from '../../components/Projects/Projects'
+import './style.scss'
+import { ProjectPlan, Projects, Title } from '../../components'
 import { projects } from '../../contants/portfolio'
+import { planItems } from '../../contants/projectDevelopment'
 
 const Portfolio = () => {
   const [pageNumber, setPageNumber] = useState(1)
@@ -54,13 +55,7 @@ const Portfolio = () => {
   return (
     <div ref={projectsWrap} className="portfolio">
       <div className="container">
-        <div className="page_title">
-          <div className="row">
-            <div className="col-12">
-              <h2>Готові проекти будинків</h2>
-            </div>
-          </div>
-        </div>
+        <Title classes="page_title" title="Готові проекти будинків" />
         <Projects projects={currentProjects} />
         <div className="row">
           <div className="col-12 text-center">
@@ -87,37 +82,7 @@ const Portfolio = () => {
             </nav>
           </div>
         </div>
-        <section className="project_structure">
-          <div className="row">
-            <div className="col-12">
-              <h3>Склад проекту приватного будинку:</h3>
-              <ul className="mb-4 ml-4">
-                {[
-                  'генеральний план (розробляється індивідуально під ваш ділянку, входить увартість проекту);',
-                  'плани поверхів;',
-                  'фасади;',
-                  'розрізи;',
-                  'візуалізація;',
-                  'план покрівлі, розкладка і візуалізація крокiв;',
-                  'план фундаментів, їх армування, розрізи;',
-                  'готові плани поверхів;',
-                  'план перекриття (плити, балки, моноліт);',
-                  'підрахунок основних матеріалів і робіт.',
-                ].map((item) => (
-                  <li key={item}>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p>
-                У будь-який готовий проект можна внести зміни. Зміна кольорів фасадів, перегородок
-                та інші дрібні зміни, які не впливають на несучі конструкції - безкоштовно. Зміни,
-                що стосуються несучих конструкцій - за невелику доплату. При внесенні платних змін
-                або індивідуальному проектуванні - аванс 30%.
-              </p>
-            </div>
-          </div>
-        </section>
+        <ProjectPlan title="Склад проекту приватного будинку:" planItems={planItems} />
       </div>
     </div>
   )

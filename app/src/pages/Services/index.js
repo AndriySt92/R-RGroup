@@ -1,19 +1,14 @@
 import React from 'react'
-import './services.scss'
+import './style.scss'
 import { Link } from 'react-router-dom'
 import { servicesItems } from '../../contants/services'
+import { Title } from '../../components'
 
 const Services = () => {
   return (
     <div className="services mb-5">
       <div className="container">
-        <div className="page_title">
-          <div className="row">
-            <div className="col-12">
-              <h2>Будівельні послуги</h2>
-            </div>
-          </div>
-        </div>
+        <Title classes="page_title" title='Будівельні послуги' />
         <section className="servises_list my-5">
           <div className="row">
             <div className="col-12">

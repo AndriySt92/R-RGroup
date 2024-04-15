@@ -10,4 +10,5 @@ export { default as calling } from './icons/calling.svg'
 export { default as download } from './icons/download.svg'
 export { default as estimate } from './icons/estimate.svg'
 export { default as tools } from './icons/tools.svg'
+export { default as facebook } from './icons/facebook.svg'
 

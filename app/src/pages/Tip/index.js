@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import './style.scss'
 import { useParams } from 'react-router-dom'
-import { Loader } from '../../components/Loader/Loader'
-import './tip.scss'
+import { Loader } from '../../components'
 import { Tip1 } from './Tip1'
 import { Tip2 } from './Tip2'
 import { Tip3 } from './Tip3'
@@ -11,15 +11,15 @@ import { Tip5 } from './Tip5'
 const Tip = () => {
   const [title, setTitle] = useState('')
   const { urlTitle } = useParams()
-  
+
   useEffect(() => {
     setTitle(urlTitle)
   }, [urlTitle])
 
-  if(!title){
+  if (!title) {
     return <Loader />
   }
-  
+
   return (
     <div className="tip">
       <div className="container">
