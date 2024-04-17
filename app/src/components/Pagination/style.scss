@@ -1,0 +1,41 @@
+.portfolio {
+  .projects {
+    margin-bottom: 20px !important;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pagination {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0px !important;
+    }
+  }
+  .page-item {
+    &.disable {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+  .page-link {
+    background-color: #fff;
+    color: var(--color-blue);
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+    transition: all 0.5 ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-blue);
+      color: #fff;
+    }
+    &.active {
+      background-color: var(--color-blue);
+      color: #fff;
+      border-color: #fff;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
