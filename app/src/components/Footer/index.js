@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { Link } from 'react-router-dom'
+import { menuItems, servicesItems } from '../../contants/menu'
 
 export const Footer = () => {
   return (
@@ -36,16 +37,9 @@ export const Footer = () => {
               </div>
               <div className="col-lg-9 mb-2 mb-xl-4 d-flex justify-content-md-center justify-content-lg-end">
                 <ul className="nav footer_nav">
-                  {[
-                    { to: '/', name: 'Будинки під ключ' },
-                    { to: '/services', name: 'Будівельні послуги' },
-                    { to: '/price', name: 'Ціни послуги' },
-                    { to: '/portfolio', name: 'Портфоліо' },
-                    { to: '/contacts', name: 'Контакти' },
-                    { to: '/tips', name: 'Поради' },
-                  ].map(({ to, name }) => (
-                    <li key={name}>
-                      <Link to={to}>{name}</Link>
+                  {menuItems.map(({ linkTo, title }) => (
+                    <li key={title}>
+                      <Link to={linkTo}>{title}</Link>
                     </li>
                   ))}
                 </ul>

@@ -1,4 +1,4 @@
-.loader_wrapper{
+.loader_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
     animation: rotation 1s linear infinite;
   }
   .loader::after {
-    content: '';  
+    content: '';
     box-sizing: border-box;
     position: absolute;
     left: 0;

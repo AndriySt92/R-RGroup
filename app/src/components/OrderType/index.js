@@ -1,11 +1,12 @@
 import { React } from 'react'
 import './style.scss'
 import { Title } from '../'
+import { Button } from '../Button'
 
 export const OrderType = ({ title, content }) => {
   return (
     <section className="orderType">
-      <Title classes='text-center' title={title} />
+      <Title classes="text-center" title={title} />
       <div className="row">
         {content.map((order, index) => {
           return (
@@ -26,9 +27,12 @@ export const OrderType = ({ title, content }) => {
                     return <li key={work}>{work}</li>
                   })}
                 </ul>
-                <div className="order_btn" data-bs-target="#exampleModal" data-bs-toggle="modal">
-                  <h6>Замовити</h6>
-                </div>
+                <Button
+                  classes="h5 mb-0"
+                  content="Замовити"
+                  dataTarget="#exampleModal"
+                  dataToggle="modal"
+                />
               </div>
             </div>
           )

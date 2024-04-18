@@ -2,7 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { lengthValidation, phoneValidation } from '../../utils/formValidation'
 import './style.scss'
 
-export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder, setIsError, setIsSuccess }) => {
+export const Form = ({
+  title,
+  subtitle,
+  withTextarea,
+  textareaPlaceholder,
+  setIsError,
+  setIsSuccess,
+}) => {
   const [formData, setFormData] = useState({ name: '', phone: '', message: '' })
   const [isDirty, setIsDirty] = useState({ name: false, phone: false, message: false })
   const [formError, setFormError] = useState({ name: '', phone: '', message: '' })
@@ -82,15 +89,16 @@ export const Form = ({ title, subtitle, withTextarea, textareaPlaceholder, setIs
         if (result.message === 'success') {
           setIsSuccess(true)
           setFormData({ name: '', phone: '', message: '' })
-          setTimeout(() => {
-            setIsSuccess(false)
-          }, 7000);
         } else {
           setIsError(true)
-          setTimeout(() => {
-            setIsError(false)
-          }, 7000);
         }
+      })
+      .catch((error) => setIsError(true))
+      .finally(() => {
+        setTimeout(() => {
+          setIsError(false)
+          setIsSuccess(false)
+        }, 7000)
       })
   }
 

@@ -1,15 +1,16 @@
 .form {
-    button {
-       background-color: var(--color-blue);
-       color: #fff;
-       &:hover {
-          background-color: var(--color-blue-hover);
-          color: #fff!important;
-       }
+  button {
+    background-color: var(--color-blue);
+    color: #fff;
+    &:hover {
+      background-color: var(--color-blue-hover);
+      color: #fff !important;
     }
-    input, textarea {
-       background-color: #eee;
-       font-size: 20px;
-       font-family: 'Roboto', sans-serif;
-    }
+  }
+  input,
+  textarea {
+    background-color: #eee;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
 }
