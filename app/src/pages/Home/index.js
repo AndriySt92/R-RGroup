@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { AutoplaySlider, Accordion, OrderType, Loader, Projects, Title } from '../../components'
+import {
+  AutoplaySlider,
+  Accordion,
+  OrderType,
+  Loader,
+  Projects,
+  Title,
+  Container,
+} from '../../components'
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import Slider from 'react-slick'
 import {
@@ -42,7 +50,7 @@ const Home = () => {
           </div>
         </Slider>
       </div>
-      <div className="container">
+      <Container>
         <Title
           classes="page_title home_title"
           title="Будівництво під ключ"
@@ -81,7 +89,7 @@ const Home = () => {
             ))}
           </div>
         </section>
-      </div>
+      </Container>
     </div>
   )
 }

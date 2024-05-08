@@ -7,6 +7,7 @@ import {
   WorkSteps,
   WorksLists,
   Title,
+  Container,
 } from '../../components'
 import {
   accordionData,
@@ -19,7 +20,7 @@ import {
 const PlasterWorks = () => {
   return (
     <div className="plaster_work">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title="Штукатурні роботи" />
         <TopSlider slideImages={slideImages} />
         <WorkSteps />
@@ -27,7 +28,7 @@ const PlasterWorks = () => {
         <Gallery images={galleryImages} />
         <Accordion accordionData={accordionData} />
         <WorksLists worksListsData={worksListsData} />
-      </div>
+      </Container>
     </div>
   )
 }

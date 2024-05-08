@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { Gallery, Projects, ProjectItem, Loader, Title, ProjectPlan, Button } from '../../components'
+import { Gallery, Projects, ProjectItem, Loader, Title, ProjectPlan, Button, Container } from '../../components'
 import { useNavigate, useParams } from 'react-router-dom'
 import { projects } from '../../contants/portfolio'
 import { getRandomProjects } from '../../utils/getRandomProjects'
@@ -32,7 +32,7 @@ const Project = () => {
 
   return (
     <div className="project">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title={`Проект будинку ${project.name}`} />
         <div className="row">
           <div className="project_left col-xl-9 col-lg-12">
@@ -80,11 +80,23 @@ const Project = () => {
             </div>
             <div className="project_right_info d-none d-xl-block">
               <div className="mt-2 mb-2">
+                <span>Проект будинку: </span>
+                <b>
+                  {project.name}
+                </b>
+              </div>
+              <div className="mt-2 mb-2">
                 <span>Площа: </span>
                 <b>
                   {project.houseArea}м<sup>2</sup>
                 </b>
               </div>
+              {project.garageArea && <div className="mt-2 mb-2">
+                <span>Площа гаража: </span>
+                <b>
+                  {project.garageArea}м<sup>2</sup>
+                </b>
+              </div>}
               <Button
                     classes="h5"
                     content="Замовити проект"
@@ -119,7 +131,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

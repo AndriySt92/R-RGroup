@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { Projects, Loader, TopSlider, Title, ProjectPlan } from '../../components'
+import { Projects, Loader, TopSlider, Title, ProjectPlan, Container } from '../../components'
 import { getRandomProjects } from '../../utils/getRandomProjects'
 import { slideImages, planItems } from '../../contants/projectDevelopment'
 
@@ -22,12 +22,12 @@ const ProjectDevelopment = () => {
 
   return (
     <div className="project_development">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title='Розробка проектів' />
         <TopSlider slideImages={slideImages} />
         <Projects title="Готові проекти будинків" projects={projects} withButton />{' '}
         <ProjectPlan title='Склад проекту приватного будинку:' planItems={planItems}/>
-      </div>
+      </Container>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { eye } from '../../assets'
-import { WorkSteps, Gallery, Title } from '../../components'
+import { WorkSteps, Gallery, Title, Button, Container } from '../../components'
 import {
   complexWorksItems,
   freeWorksItems,
@@ -9,12 +9,11 @@ import {
   pavingWorksGallery,
   popularOrdersItems,
 } from '../../contants/pavingWorks'
-import { Button } from '../../components/Button'
 
 const PavingWorks = () => {
   return (
     <div className="paving_works">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title="Укладання бруківки" />
         <section className="paving_works_top">
           <div className="container">
@@ -134,7 +133,7 @@ const PavingWorks = () => {
           </div>
         </section>
         <Gallery images={pavingWorksGallery} />
-      </div>
+      </Container>
     </div>
   )
 }

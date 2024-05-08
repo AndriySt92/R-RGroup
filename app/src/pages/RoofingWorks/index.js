@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, OrderType, Gallery, TopSlider, WorkOrder, WorksLists, Title } from '../../components'
+import { Accordion, OrderType, Gallery, TopSlider, WorksLists, Title, Container } from '../../components'
 import {
   accordionData,
   galleryImages,
@@ -11,7 +11,7 @@ import {
 const RoofingWorks = () => {
   return (
     <div className="roofing_works">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title='Покрівельні роботи' />
         <TopSlider slideImages={slideImages} />
         {/* <WorkSteps wor /> */}
@@ -19,7 +19,7 @@ const RoofingWorks = () => {
         <Gallery images={galleryImages} />
         <Accordion accordionData={accordionData} />
         <WorksLists worksListsData={worksListsData} />
-      </div>
+      </Container>
     </div>
   )
 }

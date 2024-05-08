@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, OrderType, Gallery, TopSlider, WorkOrder, WorksLists, Title } from '../../components'
+import { Accordion, OrderType, Gallery, TopSlider, WorkOrder, WorksLists, Title, Container } from '../../components'
 import {
   accordionData,
   galleryImages,
@@ -11,7 +11,7 @@ import {
 const RepairWork = () => {
   return (
     <div className="repair_work">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title='Ремонтні роботи' />
         <TopSlider slideImages={slideImages} />
         <OrderType title={orderTypeData.mainTitle} content={orderTypeData.ordersTypeList} />
@@ -37,7 +37,7 @@ const RepairWork = () => {
           </div>
         </section>
         <WorksLists worksListsData={worksListsData} />
-      </div>
+      </Container>
     </div>
   )
 }

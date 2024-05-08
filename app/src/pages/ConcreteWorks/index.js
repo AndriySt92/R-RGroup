@@ -1,5 +1,13 @@
 import React from 'react'
-import { Accordion, Gallery, Title, TopSlider, WorkSteps, WorksLists } from '../../components'
+import {
+  Accordion,
+  Container,
+  Gallery,
+  Title,
+  TopSlider,
+  WorkSteps,
+  WorksLists,
+} from '../../components'
 import {
   accordionData,
   galaryImages,
@@ -10,7 +18,7 @@ import {
 const ConcreteWorks = () => {
   return (
     <div className="concrete_works">
-      <div className="container">
+      <Container>
         <Title
           classes="page_title"
           title="Монолітні роботи: фундамент, перекриття, бетонні сходи"
@@ -20,7 +28,7 @@ const ConcreteWorks = () => {
         <Gallery images={galaryImages} />
         <Accordion accordionData={accordionData} />
         <WorksLists worksListsData={worksListsData} />
-      </div>
+      </Container>
     </div>
   )
 }

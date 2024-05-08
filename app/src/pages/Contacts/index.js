@@ -1,12 +1,12 @@
 import React from 'react'
 import './style.scss'
-import { Title } from '../../components'
+import { Container, Title } from '../../components'
 import { facebook } from '../../assets'
 
 const Contacts = () => {
   return (
     <section className="contacts">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title="Зв'язатися з Нами" />
         <hr className="mt-5" />
         <div className="row">
@@ -52,7 +52,7 @@ const Contacts = () => {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

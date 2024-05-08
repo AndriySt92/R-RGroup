@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
 import { useParams } from 'react-router-dom'
-import { Loader } from '../../components'
+import { Container, Loader } from '../../components'
 import { Tip1 } from './Tip1'
 import { Tip2 } from './Tip2'
 import { Tip3 } from './Tip3'
@@ -22,7 +22,7 @@ const Tip = () => {
 
   return (
     <div className="tip">
-      <div className="container">
+      <Container>
         <div className="row">
           {title === 'stini-z-pinoblokiv-vibir-optimalnoyi-tovshini' && <Tip1 />}
           {title === 'chomu-monolitnij-fundament-najbilsh-vigidnij' && <Tip2 />}
@@ -30,7 +30,7 @@ const Tip = () => {
           {title === 'planuvannya-zamiskih-budinkiv' && <Tip4 />}
           {title === 'budivnictvo-zamiskogo-budinku-z-chogo-pochati' && <Tip5 />}
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

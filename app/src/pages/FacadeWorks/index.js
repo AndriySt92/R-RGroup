@@ -7,6 +7,7 @@ import {
   WorkOrder,
   WorksLists,
   Title,
+  Container,
 } from '../../components'
 import {
   accordionData,
@@ -19,7 +20,7 @@ import {
 const FacadeWorks = () => {
   return (
     <div className="facade_work">
-      <div className="container">
+      <Container>
         <Title classes="page_title" title="Фасадні роботи" />
         <TopSlider slideImages={slideImages} />
         <OrderType title={orderTypeData.mainTitle} content={orderTypeData.ordersTypeList} />
@@ -27,7 +28,7 @@ const FacadeWorks = () => {
         <Gallery images={galleryImages} />
         <Accordion accordionData={accordionData} />
         <WorksLists worksListsData={worksListsData} />
-      </div>
+      </Container>
     </div>
   )
 }
