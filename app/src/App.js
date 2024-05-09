@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.scss'
 import { useRoutes } from 'react-router-dom'
 import { ScrollToTop } from './hoc/ScrollToTop/ScrollToTop'
 import { routes } from './routes'

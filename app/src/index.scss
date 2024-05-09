@@ -50,6 +50,10 @@ section{
   margin: 70px 0px 70px;
 }
 
+main {
+  padding-top: 67px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -63,6 +67,6 @@ code {
 
 @media screen and (max-width: 991px) {
   section{
-    margin: 50px 0px 50px !important;
+    margin: 40px 0px 40px !important;
   }
 }

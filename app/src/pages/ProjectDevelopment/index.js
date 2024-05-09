@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './style.scss'
-import { Projects, Loader, TopSlider, Title, ProjectPlan, Container } from '../../components'
+import { Projects, Loader, TopSlider, Title, ProjectPlan, Container, WorksLists } from '../../components'
 import { getRandomProjects } from '../../utils/getRandomProjects'
-import { slideImages, planItems } from '../../contants/projectDevelopment'
+import { slideImages, planItems, worksListsData } from '../../contants/projectDevelopment'
 
 const ProjectDevelopment = () => {
   const [projects, setProjects] = useState([])
@@ -27,6 +27,7 @@ const ProjectDevelopment = () => {
         <TopSlider slideImages={slideImages} />
         <Projects title="Готові проекти будинків" projects={projects} withButton />{' '}
         <ProjectPlan title='Склад проекту приватного будинку:' planItems={planItems}/>
+        <WorksLists worksListsData={worksListsData} />
       </Container>
     </div>
   )
