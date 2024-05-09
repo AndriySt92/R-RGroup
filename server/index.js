@@ -2,8 +2,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 import express from 'express'
 import cors from 'cors';
-import feedbackRouter from './feedbackRouter.js'
-
+import feedbackRouter from './routes/feedback-router.js'
 
 const app = express()
 
