@@ -110,7 +110,6 @@ export const galleryImages = [
 ]
 
 export const slideImages = [
-  'https://res.cloudinary.com/drcptrml4/image/upload/v1669980338/RRGroup/images/decPlaster/plaster-works-slider-1-min_kurrus.jpg',
   'https://res.cloudinary.com/drcptrml4/image/upload/v1669980338/RRGroup/images/decPlaster/dec-plaster-slide-3_-min_ij2ieo.jpg',
   'https://res.cloudinary.com/drcptrml4/image/upload/v1669980338/RRGroup/images/decPlaster/dec-plaster-slide-2_-min_m1f22u.jpg',
   'https://res.cloudinary.com/drcptrml4/image/upload/v1669980338/RRGroup/images/decPlaster/dec-plaster-slide-4_-min_zdfgo0.jpg',

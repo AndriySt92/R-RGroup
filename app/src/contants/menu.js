@@ -52,7 +52,7 @@ export const servicesItems = [
 export const menuItems = [
   { linkTo: '/', title: 'Будинки під ключ' },
   { linkTo: '/services', title: 'Будівельні послуги', servicesItems: servicesItems },
-  { linkTo: '/price', title: 'Ціни' },
+  { linkTo: '/prices', title: 'Ціни' },
   { linkTo: '/portfolio', title: 'Портфоліо' },
   { linkTo: '/tips', title: 'Поради' },
   { linkTo: '/contacts', title: 'Контакти' },

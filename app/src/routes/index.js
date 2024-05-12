@@ -15,6 +15,7 @@ const Project = React.lazy(() => import('../pages/Project'))
 const Tips = React.lazy(() => import('../pages/Tips'))
 const Tip = React.lazy(() => import('../pages/Tip'))
 const Contacts = React.lazy(() => import('../pages/Contacts'))
+const Prices = React.lazy(() => import('../pages/Prices'))
 
 export let routes = [
   {
@@ -135,6 +136,14 @@ export let routes = [
         element: (
           <React.Suspense fallback={<Loader />}>
             <Contacts />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: '/prices',
+        element: (
+          <React.Suspense fallback={<Loader />}>
+            <Prices />
           </React.Suspense>
         ),
       },
