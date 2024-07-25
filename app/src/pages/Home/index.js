@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './style.scss'
 import {
   AutoplaySlider,
   Accordion,
   OrderType,
-  Loader,
   Projects,
   Title,
   Container,
@@ -20,15 +19,7 @@ import {
 } from '../../contants/home'
 
 const Home = () => {
-  const [projects, setProjects] = useState([])
-
-  useEffect(() => {
-    setProjects(getRandomProjects(4))
-  }, [])
-
-  if (!projects.length) {
-    return <Loader />
-  }
+  const [projects, setProjects] = useState(() => getRandomProjects(4))
 
   return (
     <div className="home">
@@ -37,7 +28,7 @@ const Home = () => {
           <div>
             <img
               src="https://res.cloudinary.com/drcptrml4/image/upload/v1670420599/RRGroup/images/home/home-slider-1-min_ba9mwr.jpg"
-              className="d-block w-100"
+              className="d-block w-100 img-fluid"
               alt="..."
             />
           </div>

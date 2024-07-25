@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/R-RGroup/static/css/main.28748fed.css",
+    "main.js": "/R-RGroup/static/js/main.e40d082b.js",
+    "static/css/608.b004e26b.chunk.css": "/R-RGroup/static/css/608.b004e26b.chunk.css",
+    "static/js/608.048ec648.chunk.js": "/R-RGroup/static/js/608.048ec648.chunk.js",
+    "static/media/phone-change.gif": "/R-RGroup/static/media/phone-change.a097e61805d056d6d7db.gif",
+    "static/media/logo.png": "/R-RGroup/static/media/logo.5cd001a3c18306d2d2e0.png",
+    "static/media/lg.svg?22t19m": "/R-RGroup/static/media/lg.adb7aeef16adb8599e2d.svg",
+    "static/media/lg.woff?22t19m": "/R-RGroup/static/media/lg.0add59587d07387b771f.woff",
+    "static/media/lg.ttf?22t19m": "/R-RGroup/static/media/lg.a53dcc5ea47fe7d1d9fc.ttf",
+    "static/media/slick.svg": "/R-RGroup/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/R-RGroup/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/R-RGroup/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/trophy.svg": "/R-RGroup/static/media/trophy.c37fc00d9cec23e6d81219e0c58c29dc.svg",
+    "static/media/calling.svg": "/R-RGroup/static/media/calling.77462a9e29a9ea6df5c886b53155c066.svg",
+    "static/media/phone2.svg": "/R-RGroup/static/media/phone2.cc7f8a8e2af91bf6bc4d7d2db52798e6.svg",
+    "static/media/estimate.svg": "/R-RGroup/static/media/estimate.bd405abd81231ce6879f8fd1697c6c9d.svg",
+    "static/media/slick.woff": "/R-RGroup/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/consultation.svg": "/R-RGroup/static/media/consultation.5b93ccca000517d1eeaf2c6ff481b6f5.svg",
+    "index.html": "/R-RGroup/index.html",
+    "static/media/eye.svg": "/R-RGroup/static/media/eye.3a767702fc4b8ec576132a601eb9d1bb.svg",
+    "static/media/facebook.svg": "/R-RGroup/static/media/facebook.fa1a611c2f3b1952e77a38d40e7c3880.svg",
+    "static/media/download.svg": "/R-RGroup/static/media/download.11466158c669e4c4fc23ea0937e23196.svg",
+    "static/media/tools.svg": "/R-RGroup/static/media/tools.7c38f71042e0e07a9a874782fb2839ad.svg",
+    "static/media/phone.svg": "/R-RGroup/static/media/phone.9269f88460686687c3f590c9a20add14.svg",
+    "main.28748fed.css.map": "/R-RGroup/static/css/main.28748fed.css.map",
+    "main.e40d082b.js.map": "/R-RGroup/static/js/main.e40d082b.js.map",
+    "608.b004e26b.chunk.css.map": "/R-RGroup/static/css/608.b004e26b.chunk.css.map",
+    "608.048ec648.chunk.js.map": "/R-RGroup/static/js/608.048ec648.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28748fed.css",
+    "static/js/main.e40d082b.js"
+  ]
+}
