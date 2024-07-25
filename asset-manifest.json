@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/R-RGroup/static/css/main.28748fed.css",
-    "main.js": "/R-RGroup/static/js/main.e40d082b.js",
+    "main.css": "/R-RGroup/static/css/main.64057566.css",
+    "main.js": "/R-RGroup/static/js/main.5b4af537.js",
     "static/css/608.b004e26b.chunk.css": "/R-RGroup/static/css/608.b004e26b.chunk.css",
     "static/js/608.048ec648.chunk.js": "/R-RGroup/static/js/608.048ec648.chunk.js",
     "static/media/phone-change.gif": "/R-RGroup/static/media/phone-change.a097e61805d056d6d7db.gif",
@@ -18,19 +18,19 @@
     "static/media/estimate.svg": "/R-RGroup/static/media/estimate.bd405abd81231ce6879f8fd1697c6c9d.svg",
     "static/media/slick.woff": "/R-RGroup/static/media/slick.295183786cd8a1389865.woff",
     "static/media/consultation.svg": "/R-RGroup/static/media/consultation.5b93ccca000517d1eeaf2c6ff481b6f5.svg",
-    "index.html": "/R-RGroup/index.html",
     "static/media/eye.svg": "/R-RGroup/static/media/eye.3a767702fc4b8ec576132a601eb9d1bb.svg",
+    "index.html": "/R-RGroup/index.html",
     "static/media/facebook.svg": "/R-RGroup/static/media/facebook.fa1a611c2f3b1952e77a38d40e7c3880.svg",
     "static/media/download.svg": "/R-RGroup/static/media/download.11466158c669e4c4fc23ea0937e23196.svg",
     "static/media/tools.svg": "/R-RGroup/static/media/tools.7c38f71042e0e07a9a874782fb2839ad.svg",
     "static/media/phone.svg": "/R-RGroup/static/media/phone.9269f88460686687c3f590c9a20add14.svg",
-    "main.28748fed.css.map": "/R-RGroup/static/css/main.28748fed.css.map",
-    "main.e40d082b.js.map": "/R-RGroup/static/js/main.e40d082b.js.map",
+    "main.64057566.css.map": "/R-RGroup/static/css/main.64057566.css.map",
+    "main.5b4af537.js.map": "/R-RGroup/static/js/main.5b4af537.js.map",
     "608.b004e26b.chunk.css.map": "/R-RGroup/static/css/608.b004e26b.chunk.css.map",
     "608.048ec648.chunk.js.map": "/R-RGroup/static/js/608.048ec648.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28748fed.css",
-    "static/js/main.e40d082b.js"
+    "static/css/main.64057566.css",
+    "static/js/main.5b4af537.js"
   ]
 }
